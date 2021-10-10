@@ -1,0 +1,21 @@
+.container-text {
+    width: 384px;
+}
+
+.header-title {
+  width: 100%;
+  text-align: center;
+  font-size: 34px;
+}
+
+.little-comma {
+  font-size: 20px;
+}
+
+.border {
+    display: block;
+    height: 5px;
+    width: 100%;
+    margin-top: 2.5px;
+    background-color: #fff;
+}

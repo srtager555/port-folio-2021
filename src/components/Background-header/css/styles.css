@@ -1,3 +1,7 @@
+.container-bg {
+    position: relative;
+}
+
 .video-container {
     display: flex;
     justify-content: center; align-items: center;
@@ -10,6 +14,20 @@
 video {
     width: 100%;
 }
+
+.container-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    color: #fff;
+    font-family: 'Yaldevi';
+    font-weight: 700;
+    padding-bottom: 35px;
+} 
 
 @media (min-width: 480px) {
     video {

@@ -1,5 +1,6 @@
 import React from 'react'
 import BackgroundHeader from '../components/Background-header'
+import TittleHeader from '../components/TitleHeader'
 
 export default function Main() {
     {/* <nav></nav> */}
@@ -15,7 +16,9 @@ export default function Main() {
     {/* </information> */}
     return (
         <div>
-            <BackgroundHeader />
+            <BackgroundHeader>
+              <TittleHeader />
+            </BackgroundHeader>
         </div>
     )
 }
