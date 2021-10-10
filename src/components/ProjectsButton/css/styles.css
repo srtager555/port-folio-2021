@@ -1,0 +1,12 @@
+.container-projects__button {
+  display: block;
+  margin-top: 25px;
+}
+.container-projects__button span {
+    font-size: 20px;
+}
+.container-projects__button .border {
+    width: 100%;
+    height: 1px;
+    background-color:#fff;
+}

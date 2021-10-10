@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import BackgroundHeader from '../components/Background-header'
+import ProjectButton from '../components/ProjectsButton'
 import TittleHeader from '../components/TitleHeader'
+import ContainerSections from './ContainerSections'
 
 export default function Main() {
     {/* <nav></nav> */}
@@ -15,10 +17,13 @@ export default function Main() {
       {/* </route> */}
     {/* </information> */}
     return (
-        <div>
+        <Fragment>
             <BackgroundHeader>
               <TittleHeader />
+              <ContainerSections>
+                <ProjectButton />
+              </ContainerSections>
             </BackgroundHeader>
-        </div>
+        </Fragment>
     )
 }

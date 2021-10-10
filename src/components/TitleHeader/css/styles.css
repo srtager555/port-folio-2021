@@ -19,3 +19,12 @@
     margin-top: 2.5px;
     background-color: #fff;
 }
+
+@media (max-width: 400px) {
+  .container-text {
+    width: 354px;
+  }
+  .header-title {
+    font-size: 30px;
+  }
+}
