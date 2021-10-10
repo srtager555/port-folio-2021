@@ -1,15 +1,9 @@
 import React from 'react'
-
-const style = {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    width: '364px',
-}
+import './css/styles.css'
 
 export default function ContainerSections({children}) {
     return (
-        <div style={style}>
+        <div className="container-sections">
             {children}
         </div>
     )

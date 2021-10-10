@@ -1,0 +1,12 @@
+.container-sections {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 364px;
+}
+@media (max-width: 400px) {
+    .container-sections {
+        max-width: 320px;
+    }
+}
