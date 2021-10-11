@@ -1,46 +1,112 @@
 .container-menu_options {
-    position: absolute;
-    top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 300px;
-    z-index: 11;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  z-index: 12;
 }
 .container-menu_options .bx-logo {
-    font-family: 'Poppins';
-    font-size: 20px;
-    color: #fff;
+  font-family: "Poppins";
+  font-size: 20px;
+  color: #fff;
 }
 .container-menu_options .menu-button {
-    position: relative;
-    width: 37px;
-    height: 23px;
-    cursor: pointer;
-    transition: .2s ease-in-out;
-} .container-menu_options .menu-button:hover {
-    height: 17px;
+  position: relative;
+  width: 37px;
+  height: 23px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.container-menu_options .menu-button:hover {
+  height: 17px;
 }
 .container-menu_options .menu-button .menuLine {
-    position: absolute;
-    transform: translateY(-50%);
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 10px;
-} .container-menu_options .menu-button .menuLine.menuLine-1 {
-    top: 0%;
-} .container-menu_options .menu-button .menuLine.menuLine-2 {
-    top: 50%;
-} .container-menu_options .menu-button .menuLine.menuLine-3 {
-    top: 100%;
+  position: absolute;
+  transform: translateY(-50%);
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: .2s ease-in-out;
+}
+.container-menu_options .menu-button .menuLine.menuLine-1 {
+  top: 0%;
+}
+.container-menu_options .menu-button.active .menuLine.menuLine-1 {
+  top: 50%;
+  transform: translateY(-50%) rotate(35deg);
+}
+.container-menu_options .menu-button .menuLine.menuLine-2 {
+  top: 50%;
+}
+.container-menu_options .menu-button.active .menuLine.menuLine-2 {
+  top: 50%;
+  transform: translateY(-50%) rotate(140deg);
+}
+.container-menu_options .menu-button .menuLine.menuLine-3 {
+  top: 100%;
+}
+.container-menu_options .menu-button.active .menuLine.menuLine-3 {
+  top: 50%;
+  transform: translateY(-50%) rotate(140deg);
 }
 
-
 .container-menu_information {
-    display: none;
+  position: absolute;
+  top: 0; left: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 5%;
+  transition: .5s ease-in-out;
+  z-index: 11;
+}
+.container-menu_information.active {
+  left: 0%;
+}
+.container-menu_information .background-blur {
+    position: absolute;
+    top: 0; left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    z-index: -1;
+}
+.container-menu_information .background-blur .filter {
+    width: 150%;
+    height: 150%;
+    filter: blur(10px);
+    background-color: #0005;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.container-menu_information .menu-links {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.container-menu_information .menu-links span {
+    color: #fff0;
+    font-family: 'Noto Sans Display';
+    font-size: 66px;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px #fff;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.container-menu_information .menu-links span:hover {
+    color: #fff;
 }
