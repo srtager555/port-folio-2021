@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 
 import BackgroundHeader from '../components/Background-header'
+import Navbar from '../components/Navbar'
 import ProjectButton from '../components/ProjectsButton'
 import TittleHeader from '../components/TitleHeader'
 import ContainerSections from './ContainerSections/index'
@@ -20,6 +21,7 @@ export default function Main() {
     {/* </information> */}
     return (
         <BrowserRouter>
+            <Navbar />
             <BackgroundHeader>
               <TittleHeader />
               <ContainerSections>
