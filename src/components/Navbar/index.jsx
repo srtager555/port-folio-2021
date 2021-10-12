@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
 import "./css/styles.css";
 
 export default function Navbar() {
@@ -13,9 +14,9 @@ export default function Navbar() {
   return (
     <Fragment>
       <div className="container-menu_options">
-        <div className="bx-logo">
+        <Link to='/' className="bx-logo">
           <h1>&&</h1>
-        </div>
+        </Link >
         <div className={`menu-button ${menuInformation}`} onClick={handleActiveMenu}>
           <span className="menuLine menuLine-1"></span>
           <span className="menuLine menuLine-2"></span>
