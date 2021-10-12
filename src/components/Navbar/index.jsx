@@ -1,9 +1,10 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./css/styles.css";
 
 export default function Navbar() {
   const [menuInformation, setMenuInformation] = useState('')
+
   function handleActiveMenu (){
     if(menuInformation === ''){
       setMenuInformation('active')
