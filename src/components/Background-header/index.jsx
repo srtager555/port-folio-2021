@@ -10,7 +10,7 @@ export default function BackgroundHeader({ children, homeState }) {
   // let BM = "https://i.ibb.co/xSQbqVd/hu-Tao-background-mobil.jpg";
 
   return (
-    <div className={`container-bg ${homeState? 'on' : 'off'}`}>
+    <div className={`container-bg ${homeState? '' : 'off'}`}>
       <div className="video-container">
           <video poster={BD} src={VideoPc} autoPlay muted loop></video>
       </div>

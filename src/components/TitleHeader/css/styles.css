@@ -1,5 +1,12 @@
 .container-text {
-    width: 384px;
+  width: 384px;
+  transform: translateY(0%);
+  transition: 1s ease-in-out 2s;
+}
+.container-bg.off .container-text {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: 1s ease-in-out;
 }
 
 .header-title {
@@ -13,11 +20,11 @@
 }
 
 .border {
-    display: block;
-    height: 5px;
-    width: 100%;
-    margin-top: 2.5px;
-    background-color: #fff;
+  display: block;
+  height: 5px;
+  width: 100%;
+  margin-top: 2.5px;
+  background-color: #fff;
 }
 
 @media (max-width: 400px) {
