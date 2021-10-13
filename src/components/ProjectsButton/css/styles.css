@@ -4,11 +4,11 @@
   color: #fff;
   text-decoration: none;
   transform: translateY(0%);
-  transition: 1s ease-in-out 2s;
+  transition: 1s ease-in-out 1.5s;
 }
 .container-bg.off .container-projects__button {
     transform: translateY(50%);
-    transition: 1s ease-in-out;
+    transition: .5s ease-in-out;
     visibility: hidden;
     opacity: 0;
 }
