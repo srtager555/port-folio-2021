@@ -1,8 +1,8 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import "./css/styles.css";
 
-export default function Navbar() {
+export default function Navbar({ HomeReaction }) {
   const [menuInformation, setMenuInformation] = useState('')
 
   function handleActiveMenu (){
@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <Fragment>
       <div className="container-menu_options">
-        <Link to='/' className="bx-logo">
+        <Link to='/' onClick={HomeReaction} className="bx-logo">
           <h1>&&</h1>
         </Link >
         <div className={`menu-button ${menuInformation}`} onClick={handleActiveMenu}>

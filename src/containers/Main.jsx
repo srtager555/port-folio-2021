@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import BackgroundHeader from "../components/Background-header";
@@ -8,18 +8,29 @@ import TittleHeader from "../components/TitleHeader";
 import ContainerSections from "./ContainerSections/index";
 
 export default function Main() {
-  const [homeState, setHomeState] = useState(false);
+  const [homeState, setHomeState] = useState(true);
   function handleHomeReaction() {
-    if (window.location.pathname !== "/") {
-      setHomeState(true);
-    } else {
-      setHomeState(false);
-    }
+    setTimeout(() => {
+      if (window.location.pathname !== "/") {
+        setHomeState(false);
+      } else {
+        setHomeState(true);
+      }
+    }, 100);
   }
+  
+  useEffect(() => {
+    if (window.location.pathname !== "/") {setHomeState(false);}
+    console.log("??")
+  }, []);
 
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar
+        HomeReaction={() => {
+          handleHomeReaction();
+        }}
+      />
       <BackgroundHeader homeState={homeState}>
         <TittleHeader />
         <ContainerSections>
