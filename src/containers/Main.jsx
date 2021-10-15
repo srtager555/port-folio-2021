@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
+import { AnimatedSwitch } from "react-router-transition";
 
 import BackgroundHeader from "../components/Background-header";
 import Navbar from "../components/Navbar";
 import ProjectButton from "../components/ProjectsButton";
 import TittleHeader from "../components/TitleHeader";
 import { blogPost } from "../Context/ContextApi";
+import NotFound from "../Pages/NotFound";
+import Post from "../Pages/Post";
 import Projects from "../Pages/Projects";
+import UWU from "../Pages/UWU";
 import ContainerSections from "./ContainerSections/index";
 
 export default function Main() {
@@ -45,16 +49,21 @@ export default function Main() {
           />
         </ContainerSections>
       </BackgroundHeader>
-      <Switch>
-        {/* <Route exact path="/" component={UWU} /> */}
-        <Route
-          exact
-          path="/projects"
-          component={() => <Projects BlogPostContext={blogPost} />}
-        />
-        {/* <Route exact path="/projects/:id" component={post} /> */}
-        {/* <Route exact component={NotFound} /> */}
-      </Switch>
+      <AnimatedSwitch
+        atEnter={{ opacity: 0 }}
+        atLeave={{ opacity: 0 }}
+        atActive={{ opacity: 1 }}
+        className="switch-wrapper"
+      >
+          <Route exact path="/" component={UWU} />
+          <Route
+            exact
+            path="/projects"
+            component={() => <Projects BlogPostContext={blogPost} />}
+          />
+          <Route exact path="/projects/:id" component={Post} />
+          <Route component={NotFound} />
+      </AnimatedSwitch>
     </BrowserRouter>
   );
 }

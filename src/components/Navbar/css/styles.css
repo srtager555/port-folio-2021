@@ -1,5 +1,5 @@
 .container-menu_options {
-  position: absolute;
+  position: fixed;
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
@@ -8,7 +8,7 @@
   align-items: center;
   width: 100%;
   max-width: 300px;
-  z-index: 12;
+  z-index: 102;
 }
 .container-menu_options .bx-logo {
   font-family: "Poppins";
@@ -68,7 +68,7 @@
   height: 100vh;
   padding: 5%;
   transition: .5s ease-in-out;
-  z-index: 11;
+  z-index: 101;
 }
 .container-menu_information.active {
   left: 0%;
@@ -87,7 +87,7 @@
 .container-menu_information .background-blur .filter {
     width: 150%;
     height: 150%;
-    filter: blur(10px);
+    /* filter: blur(10px); */
     background-color: #0005;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -100,7 +100,7 @@
 }
 .container-menu_information .menu-links span {
     color: #fff0;
-    font-family: 'Noto Sans Display';
+    font-family: 'Noto Sans Display' Verdana, Geneva, Tahoma, sans-serif;
     font-size: 66px;
     font-weight: bold;
     text-transform: uppercase;
