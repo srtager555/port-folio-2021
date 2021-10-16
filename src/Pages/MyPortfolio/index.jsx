@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function myPortfolio() {
-    return (
-        <div>
-            This is My Portfolio
-        </div>
-    )
+  return <div>This is My Portfolio</div>;
 }

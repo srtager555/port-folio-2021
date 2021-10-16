@@ -1,9 +1,6 @@
-import React from 'react'
+import React from "react";
 
 export default function TheOne() {
-    return (
-        <div>
-            I am the The One project.
-        </div>
-    )
+    // const [description, setDescription] = useState('Esta es la descripcion del projecto') 
+  return <div>Hola!!!</div>
 }
