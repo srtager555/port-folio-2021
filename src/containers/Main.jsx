@@ -7,10 +7,10 @@ import Navbar from "../components/Navbar";
 import ProjectButton from "../components/ProjectsButton";
 import TittleHeader from "../components/TitleHeader";
 import { blogPost } from "../Context/ContextApi";
-import NotFound from "../Pages/NotFound";
-import Post from "../Pages/Post";
-import Projects from "../Pages/Projects";
-import UWU from "../Pages/UWU";
+import NotFound from "../Routes/NotFound";
+import Post from "../Routes/Post";
+import Projects from "../Routes/Projects";
+import UWU from "../Routes/UWU";
 import ContainerSections from "./ContainerSections/index";
 
 export default function Main() {
@@ -55,14 +55,18 @@ export default function Main() {
         atActive={{ opacity: 1 }}
         className="switch-wrapper"
       >
-          <Route exact path="/" component={UWU} />
-          <Route
-            exact
-            path="/projects"
-            component={() => <Projects BlogPostContext={blogPost} />}
-          />
-          <Route exact path="/projects/:id" component={Post} />
-          <Route component={NotFound} />
+        <Route exact path="/" component={UWU} />
+        <Route
+          exact
+          path="/projects"
+          component={() => <Projects BlogPostContext={blogPost} />}
+        />
+        <Route
+          exact
+          path="/projects/:id"
+          component={() => <Post BlogPostContext={blogPost} />}
+        />
+        <Route component={NotFound} />
       </AnimatedSwitch>
     </BrowserRouter>
   );
