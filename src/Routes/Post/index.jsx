@@ -14,7 +14,7 @@ export default function Post({ BlogPostContext }) {
         <div className="imgBox">
           <img src={post.img} alt="" />
         </div>
-        <p>{post.titulo}</p>
+        <h1 className="title-post">{post.titulo}</h1>
       </div>
       <div className="description">
         <p>{post.description}</p>
@@ -24,9 +24,5 @@ export default function Post({ BlogPostContext }) {
       </div>
     </div>
   ));
-  console.log(BlogPostContext.indexOf(post));
-  console.log(index);
-  console.log(post);
-
   return a;
 }

@@ -1,0 +1,98 @@
+.section-description {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  width: 90%;
+}
+.section-description .description-textContainer {
+  display: block;
+  text-align: justify;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #6a6060;
+  font-size: 20px;
+}
+.section-description .description-underLine {
+  display: block;
+  width: 105%;
+  height: 1px;
+  margin-top: 10px;
+  margin-left: -2.5%;
+  background-color: #000;
+}
+
+.section-information {
+  width: 90%;
+  margin: 0 auto;
+}
+.section-information .section-margin {
+  width: 100%;
+  margin-bottom: 70px;
+}
+.section-information .section-margin :is(h2, h3, h4, h5) {
+  width: 90%;
+  margin: 10px auto;
+  text-transform: uppercase;
+}
+.section-information .section-margin h2 {
+  font-size: 35px;
+}
+.section-information .section-margin h3 {
+  font-size: 25px;
+}
+.section-information .section-margin h4 {
+  font-size: 18px;
+}
+.section-information .section-margin h5 {
+  font-size: 16px;
+}
+.section-information .section-margin p {
+  width: 90%;
+  text-align: justify;
+  margin: 20px auto;
+  line-height: 25px;
+  font-family: "Noto Sans Display", sans-serif;
+  font-size: 18px;
+}
+.section-information .section-margin .img-box {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.section-information .section-margin .img-box img {
+  width: 100%;
+}
+.section-information .section-margin :is(ol, ul) {
+  margin: 0 auto;
+  width: 80%;
+  padding-left: 20px;
+}
+.section-information .section-margin :is(ol, ul) li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.highlighted-comment {
+  position: relative;
+  width: 90%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  margin: 0 auto;
+}
+.highlighted-comment::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+}
+.highlighted-word,
+.highlighted-comment span {
+  font-style: italic;
+  color: #fff;
+}
+.section-information .section-margin p a {
+  font-style: italic;
+}

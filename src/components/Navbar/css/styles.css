@@ -59,7 +59,7 @@
 }
 
 .container-menu_information {
-  position: absolute;
+  position: fixed;
   top: 0; left: 100%;
   display: flex;
   justify-content: center;

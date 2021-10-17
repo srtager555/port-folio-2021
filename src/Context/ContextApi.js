@@ -1,9 +1,17 @@
 export const blogPost = [
   {
+    name: "template",
+    type_project: "template",
+    titulo: "template",
+    img: "https://i.ibb.co/fnxvswS/kda-2x.jpg",
+    link: 'projects/template',
+    show: false,
+  },
+  {
     name: "the-one",
     type_project: "Client",
     titulo: "The One",
-    img: "https://ttager.netlify.app/img/oaAhri4.jpg",
+    img: "https://i.ibb.co/FXBMxr8/flor-2x.jpg",
     link: "projects/the-one",
   },
   {
