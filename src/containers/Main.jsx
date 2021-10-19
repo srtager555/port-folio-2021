@@ -29,7 +29,6 @@ export default function Main() {
     if (window.location.pathname !== "/") {
       setHomeState(false);
     }
-    console.log("??");
   }, []);
 
   return (

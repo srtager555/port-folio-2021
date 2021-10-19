@@ -1,12 +1,12 @@
-.container-project {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 150px 0;
+.container-project{
+    transition: 0.2s ease-in-out;
+}
+.container-project.off {
+    opacity: 0;
 }
 .container-imageHeader {
     width: 90%;
+    padding-top: 150px;
     /* height: 270px; */
     display: flex;
     justify-content: space-between;
