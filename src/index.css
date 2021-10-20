@@ -1,3 +1,6 @@
+:root {
+  --bg-color-G: #DFDEDE;
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +13,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #DFDEDE;
+  background-color: var( --bg-color-G);
   overflow-x: hidden;
 }
 

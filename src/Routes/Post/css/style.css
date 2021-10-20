@@ -33,3 +33,51 @@
 .container-content :is(h1, h2, h3, h4){
     font-family: 'Yaldevi', Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.nextProject {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    cursor: pointer;
+}
+.nextProject .imgBox {
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nextProject .imgBox img {
+    height: 100%;
+}
+:root{
+    --topPosition-nextButton: 65%;
+}
+
+
+.nextProject .nextProject-name {
+    position: absolute;
+    top: var(--topPosition-nextButton);
+    right: 20px;
+    transform: translateY(-50%);
+}
+.nextProject :is(.nextProject-name span, .nextProject-next span){
+    display: block;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: 'Yaldevi';
+    font-weight: bold;
+}
+.nextProject .nextProject-next {
+    position: absolute;
+    top: calc(var(--topPosition-nextButton) + 79px);
+    right: 20px;
+    transform: translateY(-50%);
+}
+.nextProject .nextProject-next span {
+    font-size: 50px;
+}

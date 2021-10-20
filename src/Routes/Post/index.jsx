@@ -4,13 +4,11 @@ import "./css/style.css";
 import { InformationPages } from "../../containers/InformationPages";
 import { useHistory } from "react-router-dom";
 
-function Nextpage({ BlogPostContext, index }) {
+function Nextpage({ BlogPostContext, index, opacity }) {
   let history = useHistory();
   const [nexPost, setNexPost] = useState(0);
 
   function handleScrollInit(BlogPostContext, nexPost) {
-    console.log(window.scrollY);
-
     setTimeout(() => {
       window.scroll({
         top: 0,
@@ -32,10 +30,10 @@ function Nextpage({ BlogPostContext, index }) {
   }, []);
 
   return (
-    // to={`/${BlogPostContext[nexPost].link}`}
     <div
       onClick={() => {
         handleScrollInit(BlogPostContext, nexPost);
+        opacity();
       }}
       className="nextProject"
     >
@@ -82,14 +80,12 @@ export default function Post({ BlogPostContext }) {
             <div className="container-content">
               <InformationPages id={index} />
             </div>
-            <div onClick={handleOpacity}>
-              <Nextpage
-                onClick={handleOpacity}
-                BlogPostContext={BlogPostContext}
-                id={id}
-                index={index}
-              />
-            </div>
+            <Nextpage
+              opacity={handleOpacity}
+              BlogPostContext={BlogPostContext}
+              id={id}
+              index={index}
+            />
           </div>
         );
       })}
