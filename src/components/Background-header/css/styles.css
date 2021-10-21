@@ -7,7 +7,6 @@
     height: 100vh;
     transition: height 1s ease-in-out 1s, 1s ease-in-out;
     z-index: 100;
-    /* transition: left 1s ease-in-out, top 1s ease-in-out 1s; */
 }
 .container-bg.off {
     top: 40px;
@@ -56,10 +55,16 @@ video {
 } 
 
 @media (min-width: 620px) {
+    .container-bg.off {
+        width: 600px;
+    }
     .video-container {
         justify-content: center; align-items: center;
     }
     video {
         transform: translate(0%, 0%);
+    }
+    .container-bg.off .video-container video {
+        transform: translate(0%, 8%);
     }
 }

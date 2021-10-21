@@ -1,8 +1,18 @@
+:root {
+  --maxWidth-text: 442px;
+}
+.container {
+  width: 100%;
+  padding: 0 5%;
+  max-width: 860px;
+  margin: 0 auto;
+}
 .section-description {
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 70px;
-  width: 90%;
+  width: 100%;
+  max-width: 442px;
 }
 .section-description .description-textContainer {
   display: block;
@@ -22,8 +32,7 @@
 }
 
 .section-information {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
 }
 .section-information .section-margin {
   width: 100%;
@@ -31,6 +40,7 @@
 }
 .section-information .section-margin :is(h2, h3, h4, h5) {
   width: 90%;
+  max-width: var(--maxWidth-text);
   margin: 10px auto;
   text-transform: uppercase;
 }
@@ -48,6 +58,7 @@
 }
 .section-information .section-margin p {
   width: 90%;
+  max-width: var(--maxWidth-text);
   text-align: justify;
   margin: 20px auto;
   line-height: 25px;
@@ -56,8 +67,8 @@
 }
 .section-information .section-margin .img-box {
   width: 100%;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 .section-information .section-margin .img-box img {
   width: 100%;
@@ -65,6 +76,7 @@
 .section-information .section-margin :is(ol, ul) {
   margin: 0 auto;
   width: 80%;
+  max-width: 400px;
   padding-left: 20px;
 }
 .section-information .section-margin :is(ol, ul) li {
@@ -74,8 +86,9 @@
 .highlighted-comment {
   position: relative;
   width: 90%;
+  max-width: var(--maxWidth-text);
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
   padding-left: 40px;
   margin: 0 auto;
 }

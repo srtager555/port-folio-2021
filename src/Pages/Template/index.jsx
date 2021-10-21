@@ -5,7 +5,7 @@ import "../css/styles.css";
 
 export default function Template() {
   return (
-    <Fragment>
+    <div className="container">
       <div className="section-description">
         <span className="description-textContainer">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
@@ -21,7 +21,7 @@ export default function Template() {
             maximus elit et ex mattis elementum ut nec sem. Nam vulputate.{" "}
           </p>
           <div id="link" className="img-box">
-            <img src="https://i.ibb.co/mvTf3Fx/bosque-2x.jpg" alt="" />
+            <img src="https://ttager.netlify.app/img/oaAhri4.jpg" alt="" />
           </div>
           <h3>this is a subtitle</h3>
           <p>
@@ -35,7 +35,7 @@ export default function Template() {
             <li>Lorem ipsum dlior sit amet</li>
           </ol>
           <div className="img-box">
-            <img src="https://i.ibb.co/mvTf3Fx/bosque-2x.jpg" alt="" />
+            <img src="https://ttager.netlify.app/img/oaAhri4.jpg" alt="" />
           </div>
           <div className="highlighted-comment">
             <span>Lorem ipsum dolor sit amet, dolor sit amet</span>
@@ -53,6 +53,6 @@ export default function Template() {
           </p>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 }
