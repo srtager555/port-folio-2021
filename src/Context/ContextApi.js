@@ -14,7 +14,7 @@ export const blogPost = [
     type_project: "Client",
     titulo: "The One",
     img_tumbnail: "https://i.ibb.co/FXBMxr8/flor-2x.jpg",
-    img_header: "https://i.ibb.co/FXBMxr8/flor-2x.jpg",
+    img_header: "https://i.ibb.co/rQkt8Zm/template-default-img.jpg",
     img_next: "https://i.ibb.co/FXBMxr8/flor-2x.jpg",
     link: "projects/the-one",
     show: true,
