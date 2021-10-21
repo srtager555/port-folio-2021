@@ -15,6 +15,8 @@ import ContainerSections from "./ContainerSections/index";
 
 export default function Main() {
   const [homeState, setHomeState] = useState(true);
+  // const [howUrl, setHowUrl] = useState(window.location.pathname === "/");
+  // const [ulr, setUrl] = useState(window.location.pathname);
   function handleHomeReaction() {
     setTimeout(() => {
       if (window.location.pathname !== "/") {
@@ -26,26 +28,19 @@ export default function Main() {
   }
 
   useEffect(() => {
-    if (window.location.pathname !== "/") {
-      setHomeState(false);
-    }
+    setInterval(() => {
+      handleHomeReaction();
+      console.log("?");
+    }, 500);
   }, []);
 
   return (
     <BrowserRouter>
-      <Navbar
-        HomeReaction={() => {
-          handleHomeReaction();
-        }}
-      />
+      <Navbar />
       <BackgroundHeader homeState={homeState}>
         <TittleHeader />
         <ContainerSections>
-          <ProjectButton
-            HomeReaction={() => {
-              handleHomeReaction();
-            }}
-          />
+          <ProjectButton />
         </ContainerSections>
       </BackgroundHeader>
       <AnimatedSwitch

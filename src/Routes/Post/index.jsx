@@ -23,7 +23,7 @@ function Nextpage({ BlogPostContext, index, opacity }) {
 
   useEffect(() => {
     if (index === BlogPostContext.length - 1) {
-      setNexPost(0);
+      setNexPost(1);
     } else {
       setNexPost(index + 1);
     }
@@ -38,7 +38,7 @@ function Nextpage({ BlogPostContext, index, opacity }) {
       className="nextProject"
     >
       <div className="imgBox">
-        <img src={BlogPostContext[nexPost].img} alt="" />
+        <img src={BlogPostContext[nexPost].img_next} alt="" />
       </div>
       <div className="nextProject-name">
         <span>{BlogPostContext[nexPost].titulo}</span>
@@ -66,11 +66,12 @@ export default function Post({ BlogPostContext }) {
   return (
     <React.Fragment>
       {post.map((post) => {
+        console.log(post.name)
         return (
           <div key={post.name} className={`container-project ${opacity}`}>
             <div className="container-imageHeader">
               <div className="imgBox">
-                <img src={post.img} alt="" />
+                <img src={post.img_header} alt="" />
               </div>
               <h1 className="title-post">{post.titulo}</h1>
             </div>

@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import "./css/styles.css";
 
-export default function Navbar({ HomeReaction }) {
+export default function Navbar() {
   const [menuInformation, setMenuInformation] = useState('')
 
   function handleActiveMenu (){
@@ -12,10 +12,19 @@ export default function Navbar({ HomeReaction }) {
       setMenuInformation('')
     }
   } 
+  function handleReturnButton(){
+    if(window.location.pathname === '/') {
+      return ''
+    }  else if (window.location.pathname === '/projects') {
+      return '/'
+    } else if (window.location.pathname !== '/projects/' ) {
+      return '/projects'
+    }
+  }
   return (
     <Fragment>
       <div className="container-menu_options">
-        <Link to='/' onClick={HomeReaction} className="bx-logo">
+        <Link to={handleReturnButton} className="bx-logo">
           <h1>&&</h1>
         </Link >
         <div className={`menu-button ${menuInformation}`} onClick={handleActiveMenu}>
