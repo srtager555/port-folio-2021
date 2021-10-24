@@ -1,3 +1,8 @@
+import MyPortfolio from "../Pages/MyPortfolio";
+import TheOne from "../Pages/TheOne";
+import Template from "../Pages/Template";
+import WrappingLetter from "../Pages/WrappigLetter";
+
 export const blogPost = [
   {
     name: "template",
@@ -6,7 +11,8 @@ export const blogPost = [
     img_tumbnail: "https://i.ibb.co/fnxvswS/kda-2x.jpg",
     img_header: "https://ttager.netlify.app/img/oaAhri4.jpg",
     img_next: "https://i.ibb.co/fnxvswS/kda-2x.jpg",
-    link: 'projects/template',
+    link: "projects/template",
+    content: <Template />,
     show: false,
   },
   {
@@ -16,7 +22,8 @@ export const blogPost = [
     img_tumbnail: "https://i.ibb.co/fnxvswS/kda-2x.jpg",
     img_header: "https://ttager.netlify.app/img/oaAhri4.jpg",
     img_next: "https://i.ibb.co/fnxvswS/kda-2x.jpg",
-    link: 'projects/wrapping-letters',
+    link: "projects/wrapping-letters",
+    content: <WrappingLetter />,
     show: false,
   },
   {
@@ -27,6 +34,7 @@ export const blogPost = [
     img_header: "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg",
     img_next: "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg",
     link: "projects/the-one",
+    content: <TheOne />,
     show: true,
   },
   {
@@ -37,7 +45,7 @@ export const blogPost = [
     img_header: "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg",
     img_next: "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg",
     link: "projects/portfolio-project",
+    content: <MyPortfolio />,
     show: true,
   },
-
 ];

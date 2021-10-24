@@ -52,12 +52,9 @@ function Nextpage({ AvailableShow, index, opacity }) {
 
 export default function Post({ BlogPostContext }) {
   const { id } = useParams();
-  const AvailableShow = BlogPostContext.filter((blog) => blog.show === true)
-  console.log(AvailableShow)
+  const AvailableShow = BlogPostContext.filter((blog) => blog.show === true);
   const post = AvailableShow.filter((blog) => blog.name === id);
-  console.log(post)
   const index = AvailableShow.findIndex((blog) => blog.name === id);
-  console.log(index)
   const [opacity, setOpacity] = useState("");
 
   function handleOpacity() {
@@ -82,7 +79,7 @@ export default function Post({ BlogPostContext }) {
               <p>{post.description}</p>
             </div>
             <div className="container-content">
-              <InformationPages id={index} />
+              <InformationPages index={index} AvailableShow={AvailableShow} />
             </div>
             <Nextpage
               opacity={handleOpacity}
