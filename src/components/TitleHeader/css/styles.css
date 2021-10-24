@@ -48,3 +48,19 @@
     font-size: 30px;
   }
 }
+@media (min-width: 1024px) {
+  .container-text {
+    width: 600px;
+  }
+  .header-title {
+    font-size: 54px;
+  }
+}
+@media (min-width: 1440px) {
+  .container-text {
+    width: 800px;
+  }
+  .header-title {
+    font-size: 74px;
+  }
+}

@@ -10,3 +10,8 @@
         max-width: 320px;
     }
 }
+@media (min-width: 1024px) {
+    .container-sections {
+        align-items: flex-start;
+    }
+}

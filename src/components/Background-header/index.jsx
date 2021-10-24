@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import "./css/styles.css";
 
 import VideoPc from "./assets/HuTaoPC.mp4";
-import anime from "animejs";
+// import anime from "animejs";
 // import VideoMb from "./assets/HuTaoMb.mp4";
 
 export default function BackgroundHeader({ children, homeState }) {

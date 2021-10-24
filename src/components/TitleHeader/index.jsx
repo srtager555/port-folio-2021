@@ -18,27 +18,27 @@ export default function TittleHeader() {
 
   function titleInitAnime() {
     elemento.current = anime
-        .timeline({
-          duration: 1000,
-          easing: "easeInOutSine",
-        })
-        .add({
-          targets: ".header-title .letter-title",
-          translateY: ["1.1em", 0],
-          translateX: ["0.55em", 0],
-          translateZ: 0,
-          rotateZ: [180, 0],
-          delay: anime.stagger(50),
-        })
-        .add({
-          targets: ".container-text .border",
-          width: ["0%", "100%"],
-        });
+      .timeline({
+        duration: 1000,
+        easing: "easeInOutSine",
+      })
+      .add({
+        targets: ".header-title .letter-title",
+        translateY: ["1.1em", 0],
+        translateX: ["0.55em", 0],
+        translateZ: 0,
+        rotateZ: [180, 0],
+        delay: anime.stagger(50),
+      })
+      .add({
+        targets: ".container-text .border",
+        width: ["0%", "100%"],
+      });
   }
 
   useEffect(() => {
     setTimeout(() => {
-      titleInitAnime()
+      titleInitAnime();
     }, 100);
   }, []);
 
