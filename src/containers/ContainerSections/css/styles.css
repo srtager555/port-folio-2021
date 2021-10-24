@@ -1,17 +1,25 @@
 .container-sections {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    max-width: 364px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  max-width: 364px;
 }
 @media (max-width: 400px) {
-    .container-sections {
-        max-width: 320px;
-    }
+  .container-sections {
+    max-width: 320px;
+  }
 }
 @media (min-width: 1024px) {
-    .container-sections {
-        align-items: flex-start;
-    }
+  .container-sections {
+    align-items: flex-start;
+    max-width: 650px;
+  }
+}
+@media (min-width: 1440px) {
+  .container-sections {
+    align-items: flex-start;
+    width: auto;
+    max-width: none;
+  }
 }
