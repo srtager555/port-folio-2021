@@ -1,5 +1,5 @@
 .container-bg {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 50%;
   transform: translateX(-50%);
@@ -62,7 +62,7 @@ video {
   .container-bg.off {
     width: 600px;
   }
-  .video-container {
+  .container-bg .video-container {
     justify-content: center;
     align-items: center;
   }
@@ -80,8 +80,5 @@ video {
     justify-content: flex-start;
     flex-direction: row-reverse;
     padding-right: 30px;
-  }
-  .container-bg.off .video-container video {
-    transform: translate(-22%, 8%);
   }
 }

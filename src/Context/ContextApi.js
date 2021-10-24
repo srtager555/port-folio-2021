@@ -34,7 +34,7 @@ export const blogPost = [
     img_header: "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg",
     img_next: "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg",
     link: "projects/the-one",
-    content: <TheOne />,
+    content: <Template />,
     show: true,
   },
   {
@@ -45,7 +45,7 @@ export const blogPost = [
     img_header: "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg",
     img_next: "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg",
     link: "projects/portfolio-project",
-    content: <MyPortfolio />,
+    content: <Template />,
     show: true,
   },
 ];
