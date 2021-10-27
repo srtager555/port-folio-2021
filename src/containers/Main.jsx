@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import { AnimatedSwitch } from "react-router-transition";
 
-import BackgroundHeader from "../components/Background-header";
+import BackgroundHome from "../components/Background-home";
 import Navbar from "../components/Navbar";
+import { PageLoader } from "../components/PageLoader";
 import ProjectButton from "../components/ProjectsButton";
 import TittleHeader from "../components/TitleHeader";
 import { blogPost } from "../Context/ContextApi";
@@ -15,8 +16,10 @@ import ContainerSections from "./ContainerSections/index";
 
 export default function Main() {
   const [homeState, setHomeState] = useState(true);
+  const [pageLoading, setPageLoading] = useState(false);
   // const [howUrl, setHowUrl] = useState(window.location.pathname === "/");
   // const [ulr, setUrl] = useState(window.location.pathname);
+
   function handleHomeReaction() {
     setTimeout(() => {
       if (window.location.pathname !== "/") {
@@ -32,36 +35,40 @@ export default function Main() {
       handleHomeReaction();
       console.log("?");
     }, 500);
+    setPageLoading(true);
   }, []);
 
   return (
-    <BrowserRouter>
-      <Navbar />
-      <BackgroundHeader homeState={homeState}>
-        <TittleHeader />
-        <ContainerSections>
-          <ProjectButton />
-        </ContainerSections>
-      </BackgroundHeader>
-      <AnimatedSwitch
-        atEnter={{ opacity: 0 }}
-        atLeave={{ opacity: 0 }}
-        atActive={{ opacity: 1 }}
-        className="switch-wrapper"
-      >
-        <Route exact path="/" component={UWU} />
-        <Route
-          exact
-          path="/projects"
-          component={() => <Projects BlogPostContext={blogPost} />}
-        />
-        <Route
-          exact
-          path="/projects/:id"
-          component={() => <Post BlogPostContext={blogPost} />}
-        />
-        <Route component={NotFound} />
-      </AnimatedSwitch>
-    </BrowserRouter>
+    <Fragment>
+      <PageLoader pageLoading={pageLoading} />
+      <BrowserRouter>
+        <Navbar />
+        <BackgroundHome homeState={homeState}>
+          <TittleHeader />
+          <ContainerSections>
+            <ProjectButton />
+          </ContainerSections>
+        </BackgroundHome>
+        <AnimatedSwitch
+          atEnter={{ opacity: 0 }}
+          atLeave={{ opacity: 0 }}
+          atActive={{ opacity: 1 }}
+          className="switch-wrapper"
+        >
+          <Route exact path="/" component={UWU} />
+          <Route
+            exact
+            path="/projects"
+            component={() => <Projects BlogPostContext={blogPost} />}
+          />
+          <Route
+            exact
+            path="/projects/:id"
+            component={() => <Post BlogPostContext={blogPost} />}
+          />
+          <Route component={NotFound} />
+        </AnimatedSwitch>
+      </BrowserRouter>
+    </Fragment>
   );
 }
