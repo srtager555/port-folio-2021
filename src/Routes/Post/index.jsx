@@ -4,11 +4,11 @@ import "./css/style.css";
 import { InformationPages } from "../../containers/InformationPages";
 import { useHistory } from "react-router-dom";
 
-function Nextpage({ BlogPostContext, index, opacity }) {
+function Nextpage({ AvailableShow, index, opacity }) {
   let history = useHistory();
   const [nexPost, setNexPost] = useState(0);
 
-  function handleScrollInit(BlogPostContext, nexPost) {
+  function handleScrollInit(AvailableShow, nexPost) {
     setTimeout(() => {
       window.scroll({
         top: 0,
@@ -17,13 +17,13 @@ function Nextpage({ BlogPostContext, index, opacity }) {
       });
     }, 300);
     setTimeout(() => {
-      history.push(`/${BlogPostContext[nexPost].link}`);
+      history.push(`/${AvailableShow[nexPost].link}`);
     }, 1000);
   }
 
   useEffect(() => {
-    if (index === BlogPostContext.length - 1) {
-      setNexPost(1);
+    if (index === AvailableShow.length - 1) {
+      setNexPost(0);
     } else {
       setNexPost(index + 1);
     }
@@ -32,19 +32,20 @@ function Nextpage({ BlogPostContext, index, opacity }) {
   return (
     <div
       onClick={() => {
-        handleScrollInit(BlogPostContext, nexPost);
+        handleScrollInit(AvailableShow, nexPost);
         opacity();
       }}
       className="nextProject"
     >
-      <div className="imgBox">
-        <img src={BlogPostContext[nexPost].img_next} alt="" />
-      </div>
       <div className="nextProject-name">
-        <span>{BlogPostContext[nexPost].titulo}</span>
+        <span>{AvailableShow[nexPost].titulo}</span>
+      </div>
+      <div className="imgBox">
+        <img src={AvailableShow[nexPost].img_next} alt="" />
       </div>
       <div className="nextProject-next">
-        <span>next</span>
+        <span>next project</span>
+        <span>next project</span>
       </div>
     </div>
   );
@@ -52,8 +53,9 @@ function Nextpage({ BlogPostContext, index, opacity }) {
 
 export default function Post({ BlogPostContext }) {
   const { id } = useParams();
-  const post = BlogPostContext.filter((blog) => blog.name === id);
-  const index = BlogPostContext.findIndex((blog) => blog.name === id);
+  const AvailableShow = BlogPostContext.filter((blog) => blog.show === true);
+  const post = AvailableShow.filter((blog) => blog.name === id);
+  const index = AvailableShow.findIndex((blog) => blog.name === id);
   const [opacity, setOpacity] = useState("");
 
   function handleOpacity() {
@@ -66,7 +68,6 @@ export default function Post({ BlogPostContext }) {
   return (
     <React.Fragment>
       {post.map((post) => {
-        console.log(post.name)
         return (
           <div key={post.name} className={`container-project ${opacity}`}>
             <div className="container-imageHeader">
@@ -79,11 +80,11 @@ export default function Post({ BlogPostContext }) {
               <p>{post.description}</p>
             </div>
             <div className="container-content">
-              <InformationPages id={index} />
+              <InformationPages index={index} AvailableShow={AvailableShow} />
             </div>
             <Nextpage
               opacity={handleOpacity}
-              BlogPostContext={BlogPostContext}
+              AvailableShow={AvailableShow}
               id={id}
               index={index}
             />

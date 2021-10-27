@@ -1,84 +1,108 @@
-.container-project{
-    transition: 0.2s ease-in-out;
+.container-project {
+  transition: 0.2s ease-in-out;
 }
 .container-project.off {
-    opacity: 0;
+  opacity: 0;
 }
 .container-imageHeader {
-    width: 90%;
-    max-width: 860px;
-    padding-top: 150px;
-    /* height: 270px; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 860px;
+  padding-top: 150px;
+  /* height: 270px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
 }
 .container-imageHeader .imgBox {
-    display: flex;
-    justify-content: center;align-items: center;  
-    width: 100%;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
 }
 .container-imageHeader .imgBox img {
-    width: 100%;
+  width: 100%;
 }
 .container-imageHeader h1 {
-    margin-top: 20px;
-    font-size: 40px;
-    text-transform: uppercase;
-    font-family: 'Yaldevi', Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 20px;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: "Yaldevi", Verdana, Geneva, Tahoma, sans-serif;
 }
-.container-content :is(h1, h2, h3, h4){
-    font-family: 'Yaldevi', Verdana, Geneva, Tahoma, sans-serif;
+.container-content :is(h1, h2, h3, h4) {
+  font-family: "Yaldevi", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .nextProject {
-    position: relative;
-    height: 400px;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    margin-bottom: 150px;
-    padding: 20px;
-    cursor: pointer;
+  position: relative;
+  /* height: 400px; */
+  width: 100%;
+  max-width: 500px;
+  margin: 150px auto;
+  cursor: pointer;
 }
 .nextProject .imgBox {
-    width: 40%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  max-height: 281px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
 }
 .nextProject .imgBox img {
-    height: 100%;
+  width: 100%;
+  transition: 1s ease-in-out;
 }
-:root{
-    --topPosition-nextButton: 65%;
+.nextProject:hover .imgBox img {
+  transform: scale(1.1);
 }
-
 
 .nextProject .nextProject-name {
-    position: absolute;
-    top: var(--topPosition-nextButton);
-    right: 20px;
-    transform: translateY(-50%);
+  text-transform: capitalize;
+  font-size: 50px;
+  font-family: "Yaldevi";
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-.nextProject :is(.nextProject-name span, .nextProject-next span){
-    display: block;
-    text-transform: uppercase;
-    font-size: 60px;
-    font-family: 'Yaldevi';
-    font-weight: bold;
+.nextProject .nextProject-name span {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
 }
+.nextProject .nextProject-name span:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  transition: 1s ease-in-out;
+}
+.nextProject:hover .nextProject-name span:before {
+  left: 0;
+  width: 100%;
+}
+
 .nextProject .nextProject-next {
-    position: absolute;
-    top: calc(var(--topPosition-nextButton) + 79px);
-    right: 20px;
-    transform: translateY(-50%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  height: 20px;
+  margin-top: 10px;
+  overflow: hidden;
+  /* background-color: #fff; */
 }
 .nextProject .nextProject-next span {
-    font-size: 50px;
+  transition: 1s ease-in-out;
+}
+.nextProject:hover .nextProject-next span {
+  transform: translateY(-17px);
 }
