@@ -11,7 +11,10 @@ export default function Projects({ BlogPostContext }) {
             <Link to={p.link} key={"p " + index} className="container-post">
               <div className="titleContainer">
                 <p className="type-project">{p.type_project}</p>
-                <h3>{p.titulo}</h3>
+                <div className="title-wrapped">
+                  <span>{p.titulo}</span>
+                  <span>{p.titulo}</span>
+                </div>
               </div>
               <div className="imageContainer">
                 <img src={p.img_tumbnail} alt="" />

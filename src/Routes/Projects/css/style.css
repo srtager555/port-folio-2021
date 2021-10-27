@@ -45,11 +45,21 @@
   width: 70%;
   background-color: #fff;
 }
-.titleContainer h3 {
+.container-post .titleContainer .title-wrapped {
+  height: 34px;
+  overflow: hidden;
+}
+.container-post .titleContainer .title-wrapped span {
+  display: block;
   font-size: 25px;
   text-transform: uppercase;
+  font-weight: bold;
+  transition: .5s ease-in-out;
 }
-.imageContainer {
+.container-post:hover .title-wrapped span {
+  transform: translateY(-34px);
+}
+.container-post .imageContainer {
   position: relative;
   display: flex;
   justify-content: center;
@@ -59,6 +69,10 @@
   overflow: hidden;
   background-color: #fff;
 }
-.imageContainer img {
+.container-post .imageContainer img {
   width: 100%;
+  transition: 1s ease-in-out;
+}
+.container-post:hover .imageContainer img {
+  transform: scale(1.1);
 }

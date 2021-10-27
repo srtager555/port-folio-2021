@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect, useRef } from "react";
 import "./css/styles.css";
 
-import Anime, { anime } from "react-anime";
+import { anime } from "react-anime";
 
 export default function TittleHeader() {
   const elemento = useRef(null);
@@ -35,7 +35,6 @@ export default function TittleHeader() {
         width: ["0%", "100%"],
       });
   }
-
   useEffect(() => {
     setTimeout(() => {
       titleInitAnime();

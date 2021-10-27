@@ -21,6 +21,7 @@
 }
 .container-projects__button span {
   font-size: 20px;
+  text-transform: uppercase;
 }
 .container-projects__button .border {
   width: 100%;

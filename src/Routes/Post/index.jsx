@@ -37,14 +37,15 @@ function Nextpage({ AvailableShow, index, opacity }) {
       }}
       className="nextProject"
     >
-      <div className="imgBox">
-        <img src={AvailableShow[nexPost].img_next} alt="" />
-      </div>
       <div className="nextProject-name">
         <span>{AvailableShow[nexPost].titulo}</span>
       </div>
+      <div className="imgBox">
+        <img src={AvailableShow[nexPost].img_next} alt="" />
+      </div>
       <div className="nextProject-next">
-        <span>next</span>
+        <span>next project</span>
+        <span>next project</span>
       </div>
     </div>
   );
