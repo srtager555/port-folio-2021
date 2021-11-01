@@ -5,19 +5,19 @@ import "./css/styles.css";
 export default function Navbar() {
   const [menuInformation, setMenuInformation] = useState('')
 
-  function handleActiveMenu (){
-    if(menuInformation === ''){
+  function handleActiveMenu() {
+    if (menuInformation === '') {
       setMenuInformation('active')
     } else {
       setMenuInformation('')
     }
-  } 
-  function handleReturnButton(){
-    if(window.location.pathname === '/') {
+  }
+  function handleReturnButton() {
+    if (window.location.pathname === '/') {
       return ''
-    }  else if (window.location.pathname === '/projects') {
+    } else if (window.location.pathname === '/projects') {
       return '/'
-    } else if (window.location.pathname !== '/projects/' ) {
+    } else if (window.location.pathname !== '/projects/') {
       return '/projects'
     }
   }
@@ -28,9 +28,19 @@ export default function Navbar() {
           <h1>&&</h1>
         </Link >
         <div className={`menu-button ${menuInformation}`} onClick={handleActiveMenu}>
-          <span className="menuLine menuLine-1"></span>
-          <span className="menuLine menuLine-2"></span>
-          <span className="menuLine menuLine-3"></span>
+          <div className="circle-border border-1">
+          </div>
+          <div className="container-text">
+            <span className="menu-title Open">
+              Open
+            </span>
+            <span className="menu-title menu">
+              Menu
+            </span>
+            <span className="menu-title menu">
+              Close
+            </span>
+          </div>
         </div>
       </div>
       <div className={`container-menu_information ${menuInformation}`}>
