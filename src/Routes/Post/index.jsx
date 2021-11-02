@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import "./css/style.css";
 import { InformationPages } from "../../containers/InformationPages";
 import { useHistory } from "react-router-dom";
+import { PlaceHolderImage } from "../../components/PlaceHolderImage";
 
 function Nextpage({ AvailableShow, index, opacity }) {
   let history = useHistory();
@@ -41,7 +42,11 @@ function Nextpage({ AvailableShow, index, opacity }) {
         <span>{AvailableShow[nexPost].titulo}</span>
       </div>
       <div className="imgBox">
-        <img src={AvailableShow[nexPost].img_next} alt="" />
+        <PlaceHolderImage
+          src={AvailableShow[nexPost].img_next}
+          alt={AvailableShow[nexPost].titulo}
+        />
+        {/* <img src={AvailableShow[nexPost].img_next} alt="" /> */}
       </div>
       <div className="nextProject-next">
         <span>next project</span>
@@ -72,7 +77,8 @@ export default function Post({ BlogPostContext }) {
           <div key={post.name} className={`container-project ${opacity}`}>
             <div className="container-imageHeader">
               <div className="imgBox">
-                <img src={post.img_header} alt="" />
+                <PlaceHolderImage src={post.img_header} alt="" />
+                {/* <img src={post.img_header} alt="" /> */}
               </div>
               <h1 className="title-post">{post.titulo}</h1>
             </div>

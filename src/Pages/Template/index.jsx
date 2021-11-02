@@ -20,7 +20,7 @@ export default function Template() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
             maximus elit et ex mattis elementum ut nec sem. Nam vulputate.{" "}
           </p>
-          <div id="link" className="img-box">
+          <div className="img-box">
             <img src="https://ttager.netlify.app/img/oaAhri4.jpg" alt="" />
           </div>
           <h3>this is a subtitle</h3>
@@ -49,7 +49,7 @@ export default function Template() {
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
             maximus elit et ex mattis elementum ut nec sem. Nam{" "}
-            <Link to="/projects/template#link">vulputate</Link>.
+            <Link to="/projects/template">vulputate</Link>.
           </p>
         </div>
       </div>

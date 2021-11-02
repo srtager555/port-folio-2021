@@ -52,11 +52,11 @@
   align-items: center;
   z-index: -1;
 }
-.nextProject .imgBox img {
+.nextProject .imgBox div {
   width: 100%;
   transition: 1s ease-in-out;
 }
-.nextProject:hover .imgBox img {
+.nextProject:hover .imgBox div {
   transform: scale(1.1);
 }
 
