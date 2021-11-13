@@ -12,7 +12,7 @@ export default function BackgroundHeader({ children, homeState }) {
 
   return (
     <div className={`container-bg ${homeState? '' : 'off'}`}>
-      <div  className="video-container">
+      <div className="video-container">
           <video poster={BD} src={VideoPc} autoPlay muted loop preload></video>
       </div>
       <div className="container-title">{children}</div>
