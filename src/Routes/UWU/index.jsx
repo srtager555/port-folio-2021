@@ -1,10 +1,10 @@
-import helmet from "helmet";
+import Helmet from 'react-helmet';	
 import React from "react";
 
 export default function UWU() {
   return (
     <div className="container">
-      <helmet>
+      <Helmet>
         <title>¿Problemas isomoficos?</title>
         <meta
           name="description"
@@ -18,7 +18,7 @@ export default function UWU() {
           property="og:image"
           content="https://i.ibb.co/QH6hrC1/22470419.jpg"
         />
-      </helmet>
+      </Helmet>
       <p
         style={{
           fontFamily: "'Poppins', Verdana",
