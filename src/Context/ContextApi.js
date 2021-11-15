@@ -13,7 +13,7 @@ export const blogPost = [
     img_next: "https://i.ibb.co/fnxvswS/kda-2x.jpg",
     link: "projects/template",
     content: <Template />,
-    show: false,
+    show: true,
   },
   {
     name: "wrapping-letters",
@@ -35,7 +35,7 @@ export const blogPost = [
     img_next: "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg",
     link: "projects/the-one",
     content: <Template />,
-    show: true,
+    show: false,
   },
   {
     name: "portfolio-project",
