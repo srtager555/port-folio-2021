@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router";
 import "./css/style.css";
 import { InformationPages } from "../../containers/InformationPages";
@@ -62,6 +62,8 @@ export default function Post({ BlogPostContext }) {
   const post = AvailableShow.filter((blog) => blog.name === id);
   const index = AvailableShow.findIndex((blog) => blog.name === id);
   const [opacity, setOpacity] = useState("");
+  const nextImage = useRef(null);
+  const [cssNextImage, setCssNextImage] = useState({});
 
   function handleOpacity() {
     setOpacity("off");
@@ -69,6 +71,11 @@ export default function Post({ BlogPostContext }) {
       setOpacity("");
     }, 1500);
   }
+  useEffect(() => {
+    setCssNextImage({
+      height: nextImage.current.width / 1.77777778,
+    });
+  }, []);
 
   return (
     <React.Fragment>
@@ -76,7 +83,7 @@ export default function Post({ BlogPostContext }) {
         return (
           <div key={post.name} className={`container-project ${opacity}`}>
             <div className="container-imageHeader">
-              <div className="imgBox">
+              <div className="imgBox" ref={nextImage} style={cssNextImage}>
                 <PlaceHolderImage src={post.img_header} alt="" />
                 {/* <img src={post.img_header} alt="" /> */}
               </div>

@@ -1,7 +1,7 @@
 // import MyPortfolio from "../Pages/MyPortfolio";
 // import TheOne from "../Pages/TheOne";
 import Template from "../Pages/Template";
-import WrappingLetter from "../Pages/WrappigLetter";
+// import WrappingLetter from "../Pages/WrappigLetter";
 
 export const blogPost = [
   {
@@ -23,7 +23,7 @@ export const blogPost = [
     img_header: "https://ttager.netlify.app/img/oaAhri.jpg",
     img_next: "https://i.ibb.co/fnxvswS/kda-2x.jpg",
     link: "projects/wrapping-letters",
-    content: <WrappingLetter />,
+    content: <Template />,
     show: true,
   },
   {
