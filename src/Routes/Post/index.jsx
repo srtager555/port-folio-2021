@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router";
 import "./css/style.css";
 import { InformationPages } from "../../containers/InformationPages";
 import { useHistory } from "react-router-dom";
+import { PlaceHolderImage } from "../../components/PlaceHolderImage";
 
 function Nextpage({ AvailableShow, index, opacity }) {
   let history = useHistory();
@@ -41,7 +42,11 @@ function Nextpage({ AvailableShow, index, opacity }) {
         <span>{AvailableShow[nexPost].titulo}</span>
       </div>
       <div className="imgBox">
-        <img src={AvailableShow[nexPost].img_next} alt="" />
+        <PlaceHolderImage
+          src={AvailableShow[nexPost].img_next}
+          alt={AvailableShow[nexPost].titulo}
+        />
+        {/* <img src={AvailableShow[nexPost].img_next} alt="" /> */}
       </div>
       <div className="nextProject-next">
         <span>next project</span>
@@ -57,6 +62,8 @@ export default function Post({ BlogPostContext }) {
   const post = AvailableShow.filter((blog) => blog.name === id);
   const index = AvailableShow.findIndex((blog) => blog.name === id);
   const [opacity, setOpacity] = useState("");
+  const nextImage = useRef(null);
+  const [cssNextImage, setCssNextImage] = useState({});
 
   function handleOpacity() {
     setOpacity("off");
@@ -64,6 +71,11 @@ export default function Post({ BlogPostContext }) {
       setOpacity("");
     }, 1500);
   }
+  useEffect(() => {
+    setCssNextImage({
+      height: nextImage.current.width / 1.77777778,
+    });
+  }, []);
 
   return (
     <React.Fragment>
@@ -71,8 +83,9 @@ export default function Post({ BlogPostContext }) {
         return (
           <div key={post.name} className={`container-project ${opacity}`}>
             <div className="container-imageHeader">
-              <div className="imgBox">
-                <img src={post.img_header} alt="" />
+              <div className="imgBox" ref={nextImage} style={cssNextImage}>
+                <PlaceHolderImage src={post.img_header} alt="" />
+                {/* <img src={post.img_header} alt="" /> */}
               </div>
               <h1 className="title-post">{post.titulo}</h1>
             </div>
