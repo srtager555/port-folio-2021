@@ -13,7 +13,7 @@ export const blogPost = [
     img_next: "https://i.ibb.co/fnxvswS/kda-2x.jpg",
     link: "projects/template",
     content: <Template />,
-    show: true,
+    show: false,
   },
   {
     name: "wrapping-letters",
