@@ -29,7 +29,7 @@ export function PlaceHolderImage({ src, alt }) {
         <img
           src={src}
           alt={alt}
-          onLoad={() => setTimeout(() => setLoading(false), 5000)}
+          onLoad={() => setLoading(false)}
           onError={() => setImage(null)}
           style={css}
         />
