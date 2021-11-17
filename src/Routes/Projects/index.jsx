@@ -8,7 +8,7 @@ export default function Projects({ BlogPostContext }) {
       {BlogPostContext.map((p, index) => {
         if (p.show) {
           return (
-            <Link to={p.link} key={"p " + index} className="container-post">
+            <Link to={window.location.pathname + p.link} key={"p " + index} className="container-post">
               <div className="titleContainer">
                 <p className="type-project">{p.type_project}</p>
                 <div className="title-wrapped">
