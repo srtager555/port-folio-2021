@@ -46,6 +46,7 @@ export function PlaceHolderImage({ src, alt }) {
             height: "100%",
             minHeight: imageMinHeight,
             backgroundColor: "rgba(0,0,0, 0.1)",
+            color: "rgba(0,0,0, 0.2)",
             opacity: loading ? "1" : "0",
             transition: "background-color 0.5s ease-in-out",
             zIndex: 1,
