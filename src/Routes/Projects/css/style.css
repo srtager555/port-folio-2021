@@ -7,7 +7,7 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 0 30px;
@@ -22,7 +22,6 @@
   width: 100%;
   max-width: 350px;
   height: 200px;
-  margin-right: 20px;
   margin-bottom: 50px;
   text-decoration: none;
 }

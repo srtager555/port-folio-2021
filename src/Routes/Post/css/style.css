@@ -7,7 +7,7 @@
 .container-imageHeader {
   width: 90%;
   max-width: 860px;
-  padding-top: 85px;
+  padding-top: 150px;
   /* height: 270px; */
   display: flex;
   justify-content: space-between;
@@ -104,4 +104,10 @@
 }
 .nextProject:hover .nextProject-next span {
   transform: translateY(-20px);
+}
+
+@media (min-width: 1024px) {
+  .container-imageHeader {
+    padding-top: 85px;
+  }
 }
