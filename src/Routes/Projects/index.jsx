@@ -9,9 +9,6 @@ export default function Projects({ BlogPostContext }) {
   useEffect(() => {
     setUrlSlash([...wPath]);
   }, []);
-  console.log(wPath);
-  console.log(urlSlash);
-  console.log(urlSlash.length);
   return (
     <div className="container-projects">
       {BlogPostContext.map((p, index) => {
