@@ -5,6 +5,7 @@ import { InformationPages } from "../../containers/InformationPages";
 import { useHistory } from "react-router-dom";
 import { PlaceHolderImage } from "../../components/PlaceHolderImage";
 import { LayoutHelmet } from "../../Layouts/HelmetLayout";
+import NotFound from "../NotFound";
 
 function Nextpage({ AvailableShow, index, opacity }) {
   let history = useHistory();
@@ -59,12 +60,13 @@ function Nextpage({ AvailableShow, index, opacity }) {
 
 export default function Post({ BlogPostContext }) {
   const { id } = useParams();
+  const [opacity, setOpacity] = useState("");
+  const nextImage = useRef(null);
+  const [found, setFound] = useState(false);
+
   const AvailableShow = BlogPostContext.filter((blog) => blog.show === true);
   const post = AvailableShow.filter((blog) => blog.name === id);
   const index = AvailableShow.findIndex((blog) => blog.name === id);
-  const [opacity, setOpacity] = useState("");
-  const nextImage = useRef(null);
-  const [cssNextImage, setCssNextImage] = useState({});
 
   function handleOpacity() {
     setOpacity("off");
@@ -72,15 +74,18 @@ export default function Post({ BlogPostContext }) {
       setOpacity("");
     }, 1500);
   }
+
   useEffect(() => {
-    setCssNextImage({
-      height: nextImage.current.width / 1.77777778,
-    });
+    if (post.length === 0) {
+      setFound(false)
+    } else {
+      setFound(true)
+    }
   }, []);
 
   return (
     <React.Fragment>
-      {post.map((post) => {
+      {found ? post.map((post) => {
         return (
           <LayoutHelmet
             title={`Carlos && Ponce | ${post.titulo}`}
@@ -110,7 +115,7 @@ export default function Post({ BlogPostContext }) {
             </div>
           </LayoutHelmet>
         );
-      })}
+      }) : <NotFound />}
     </React.Fragment>
   );
 }
