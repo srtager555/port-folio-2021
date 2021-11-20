@@ -75,8 +75,6 @@ export default function Post({ BlogPostContext }) {
     }, 1500);
   }
 
-  console.log(post);
-
   useEffect(() => {
     if (post.length === 0) {
       setFound(false)
