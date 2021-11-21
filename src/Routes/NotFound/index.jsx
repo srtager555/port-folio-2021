@@ -18,6 +18,7 @@ export default function NotFound() {
             <Link to="/">Go to home</Link>
             <Link to="/projects">Go to projects</Link>
           </div>
+          <span>path: {window.location.pathname}</span>
           <span>Maybe you were wrong or the post was lost :3</span>
         </div>
       </div>
