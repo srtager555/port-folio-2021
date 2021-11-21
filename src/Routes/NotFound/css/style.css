@@ -1,0 +1,74 @@
+
+
+.container-404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding-top: 125px;
+}
+.container-404 .card-404 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 99%;
+    max-width: 500px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+.container-404 .card-404 .card-404-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.container-404 .card-404 .card-404-buttons a {
+    display: inline-block;
+    padding: 15px 30px;
+    box-shadow: 0 0 20px #0001;
+    color: #fff;
+    border-radius: 20px;   
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 200ms ease-in-out;
+}
+.container-404 .card-404 .card-404-buttons a:nth-child(1) {
+    background-color: blue;
+}
+.container-404 .card-404 .card-404-buttons a:nth-child(2) {
+    background-color: red;
+}
+.container-404 .card-404 .card-404-buttons a:hover {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+.container-404 .card-404 .card-404-buttons a:active { 
+    transform: scale(0.8);
+    opacity: 0.8;
+}
+.container-404 .card-404 h1 {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    font-size: 200px;
+}
+.container-404 .card-404 h1 span {
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: -110px;
+}
+.container-404 .card-404 span {
+    color: var(--description-color);
+}
+
+@media (min-width: 480px) {
+    .container-404 .card-404 .card-404-buttons a {
+        font-size: 18px;
+    }
+}
