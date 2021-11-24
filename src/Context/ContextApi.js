@@ -1,4 +1,4 @@
-// import MyPortfolio from "../Pages/MyPortfolio";
+import MyPortfolio from "../Pages/MyPortfolio";
 // import TheOne from "../Pages/TheOne";
 import Template from "../Pages/Template";
 // import WrappingLetter from "../Pages/WrappigLetter";
@@ -24,7 +24,7 @@ export const blogPost = [
     img_next: "https://i.ibb.co/fnxvswS/kda-2x.jpg",
     link: "wrapping-letters",
     content: <Template />,
-    show: true,
+    show: false,
   },
   {
     name: "the-one",
@@ -45,7 +45,7 @@ export const blogPost = [
     img_header: "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg",
     img_next: "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg",
     link: "portfolio-project",
-    content: <Template />,
+    content: <MyPortfolio />,
     show: true,
   },
 ];
