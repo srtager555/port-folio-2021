@@ -25,7 +25,7 @@ export default function myPortfolio() {
             maintenance to the project.
           </p>
           <PlaceHolderImage
-            src="https://i.ibb.co/N1Pmy6h/image-1.png"
+            src="https://i.ibb.co/1QB7kk3/old-number-sections.jpg"
             alt="5 sections, only 2 is necesary"
           />
           {/* <div className="highlighted-comment">
@@ -58,7 +58,7 @@ export default function myPortfolio() {
             behind it.
           </p>
           <PlaceHolderImage
-            src="https://i.ibb.co/TK7BV9D/hom-en-secciones.png"
+            src="https://i.ibb.co/7KJ5V52/home-in-parts.jpg"
             alt="My home has two parts"
           />
           {/* <div className="highlighted-comment">
@@ -75,7 +75,7 @@ export default function myPortfolio() {
             ability to show more future sections if necessary.
           </p>
           <PlaceHolderImage
-            src="https://i.ibb.co/4sQSYKH/first-version-of-the-navbar.png"
+            src="https://i.ibb.co/5MNBpfF/first-version-navbar.jpg"
             alt="First version of the navbar"
           />
           {/* <div className="highlighted-comment">
@@ -109,7 +109,7 @@ export default function myPortfolio() {
             knew how to solve it.
           </p>
           <PlaceHolderImage
-            src="https://i.ibb.co/7G9W59r/post-en-secciones.png"
+            src="https://i.ibb.co/VH5HHMx/post-in-parts.jpg"
             alt="Image that details the post"
           />
           {/* <div className="highlighted-comment">
@@ -125,7 +125,7 @@ export default function myPortfolio() {
             title, cover image and if the work is personal or of a client.
           </p>
           <PlaceHolderImage
-            src="https://i.ibb.co/rGMbdrB/post-repetidos.png"
+            src="https://i.ibb.co/1KCNDBP/many-post.jpg"
             alt="Image of several repeated posts"
           />
           {/* <div className="highlighted-comment">
@@ -152,7 +152,7 @@ export default function myPortfolio() {
             good, but I think I've managed to do something passable
           </p>
           <PlaceHolderImage
-            src="https://i.ibb.co/cC6zTGh/text-image.png"
+            src="https://i.ibb.co/b2T3Q97/example-text.jpg"
             alt="bruh"
           />
           <p>
