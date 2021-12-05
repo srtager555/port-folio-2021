@@ -7,151 +7,188 @@ export default function myPortfolio() {
     <div className="container">
       <div className="section-description">
         <span className="description-textContainer">
-          This is the post of my portfolio, here you can see what it is now and
-          the ideas I have for its future.
+          In this post you will be able to know what was the design process that
+          my portfolio went through and what is the possible future that awaits
+          it.
         </span>
         <span className="description-underLine" />
       </div>
       <div className="section-information">
         <div className="section-margin">
-          <h2>What is the reason for this post?</h2>
+          <h2>The reason for this post.</h2>
           <p>
-            Tuve un problema muy serio con mi portafolio, y es no tener un
-            trabajo previo, con este problema tuve muchas ideas de cómo
-            solucionarlo, porque sin contenido que mostrar se hace complicado el
-            asunto, pero pude conseguir algo interesante.
+            The birth of this idea is very interesting, it all stems from the
+            problem of not having previously worked in a company or for someone
+            or not having personal projects finished or planned. This problem
+            could condition the complete design of my portfolio, because before
+            it had a good number of sections that only added more work and
+            maintenance to the project.
           </p>
           <PlaceHolderImage
-            src="https://i.ibb.co/9VXNr65/Created-with-GIMP.jpg"
-            alt="Empty portfolio"
+            src="https://i.ibb.co/N1Pmy6h/image-1.png"
+            alt="5 sections, only 2 is necesary"
           />
+          {/* <div className="highlighted-comment">
+            <span>Tener un portafolio vacio es un problema bastante serio</span>
+          </div> */}
           <p>
-            Tras ver la imagen anterior ya se puede entender que este problema
-            no un chiste que puedes dejar pasar, pero la solución si lo es{" "}
-            {">-<"}.
+            Of course, this idea was born to avoid that, the problem of trying
+            to fill my personal work page with content that the users who may be
+            my future clients are not interested in, of course you can also take
+            this idea if you need a bit of extra content of what you do, no
+            problem =).
+          </p>
+          <h2>A somewhat peculiar first impression.</h2>
+          <p>
+            From the beginning I always wanted to implement something in the
+            design that highlights and makes my portfolio different from the
+            others.
+          </p>
+          <p>
+            I started out drawing and making my own multimedia, but I'm still
+            not good enough to do something decent and I also don't have a full
+            bag to hire an artist, so I took the path of using the splashart of
+            certain video game characters that I like to play and thus solve
+            that problem until you can make or send to make the multimedia.
+          </p>
+          <h3>Let's talk about Home.</h3>
+          <p>
+            Starting with the spice, we have the home that is literally the only
+            strong point if you talk about design, of course ignoring the code
+            behind it.
           </p>
           <PlaceHolderImage
-            src="https://i.ibb.co/wgYCsJH/problem-solved.jpg"
-            alt="The problem of the empty portfolio is solved"
+            src="https://i.ibb.co/TK7BV9D/hom-en-secciones.png"
+            alt="My home has two parts"
           />
-          <div className="highlighted-comment">
-            <span>Parece ridículo, pero es anécdota XD</span>
-          </div>
-          <p>
-            Se me ocurrió la maravillosa idea de usar mi portafolio como un
-            trabajo o como un proyecto, y además de eso sería un proyecto
-            personal en progreso, porque tengo muchas ideas que pienso
-            implementar para mi portafolio.
-          </p>
-          <p>
-            Con esta solución en manos pude tener una línea la cual hacer mi
-            diseño, pero no todo es color de rosas porque tuve un problema más
-            además de este.
-          </p>
-          <h2>Who am I really?</h2>
-          <p>
-            No todo pudo ser de color rosa, porque me enfrente a un problema
-            mucho mas grande que el anterior, pero si lo vemos de manera fría
-            podría ser nada serio.
-          </p>
-          <PlaceHolderImage
-            src="https://i.ibb.co/bKXZ5WC/81044-ED9-A7-BF-4-D94-9-E36-E9-B0-B089831-A.png"
-            alt="A similar design awaits the page"
-          />
-          <div className="highlighted-comment">
+          {/* <div className="highlighted-comment">
             <span>
               Alguna ves la pagina tuvo varias secciones, pero se fueron
               descartando con el tiempo, hasta quedar projects. Es muy probable
               que la pagina dopte un diseño similar, pero en 3D
             </span>
-          </div>
+          </div> */}
           <p>
-            Todo nace en la sección “I’m” en principio tenia que ser sencilla,
-            pero el problema comenzó en no saber que colocar en ella, se me hizo
-            muy interesante porque después de un par de horas reflexionando en
-            que poner en ella me llevo a la conclusión en que yo soy nadie ._.
-            si un problema bastante raro.
+            As we can see, if you are a web designer you can see that the Home
+            is really working to have as little content as possible and is
+            "expandable", when I write "expandable" I mean that it has the
+            ability to show more future sections if necessary.
           </p>
           <PlaceHolderImage
-            src="https://i.ibb.co/gj3rmJ4/70411649-C476-447-C-8834-8-A0-F0-F3-F6186.jpg"
-            alt="I tried but I understood that it was not yet time to do it"
+            src="https://i.ibb.co/4sQSYKH/first-version-of-the-navbar.png"
+            alt="First version of the navbar"
           />
-          <div className="highlighted-comment">
+          {/* <div className="highlighted-comment">
             <span>
               Lo intente varias veces, pero no pude lograr llenar la sección
               como queria por la falta de información, no digo que sea
               imposible, pero el diseño de mi portfolio no permitia eso con
               facilidad
             </span>
-          </div>
+          </div> */}
           <p>
-            Si, lo sé, el problema se podía resolver colocando información sobre
-            quien soy, pero no me parecía absolutamente nada original porque
-            prácticamente un copiar y pegar decorado de una manera distinta. Al
-            final como otras 4 seccion la quite, pero cuando yo sea alguien y
-            tenga algo que contar regresar porque tengo un par de ideas
-            interesantes sobre ella.
+            Sure, but if you want to travel from one place to another, you would
+            need to return completely to home and that is not entirely optimal,
+            and here the menu comes into play, of course, until there is an
+            extra section, the sense of making the browser in the The menu is
+            null, so in its first version I reserve not to apply it and wait
+            when it lists the next section that I suppose will be in early 2022
+            and the menu will have a much greater utility.
           </p>
-          <h2>Why a design with drawings of girls?</h2>
+          <h3>The way to present the content</h3>
           <p>
-            El motivo es bastante interesante, aunque no es del todo original
-            porque yo no soy el autor de ellas, algo si hay que reconocer, creo
-            que se puede contar con los dedos de las manos las personas que
-            tengan un diseño similar al mío y con un concepto similar ni
-            digamos.
+            This is the part that I personally find most difficult because not
+            having content does not give me a clear image of what to show, but
+            luckily I spent some time preparing information articles so I
+            already had an idea of ​​what it is. the best way to show it.
+          </p>
+          <h3>Displaying project posts</h3>
+          <p>
+            I have to admit that this is the easiest part of the job, but it has
+            a lot of science behind it, but from the previous designs I already
+            knew how to solve it.
           </p>
           <PlaceHolderImage
-            src="https://i.ibb.co/jZQ29dv/init-with-ahri.jpg"
-            alt="practicamente comence el mundo web con ella."
+            src="https://i.ibb.co/7G9W59r/post-en-secciones.png"
+            alt="Image that details the post"
           />
-          <div className="highlighted-comment">
+          {/* <div className="highlighted-comment">
             <span>
               Todo esto comienza en el 2019, aunque suene raro, la comence a
               usar como plantilla hasta que llego a produccion :v porque se me
               ocurrio que seria muy original usarla porque nadie mas lo hace.
             </span>
-          </div>
+          </div> */}
           <p>
-            Todo esto nace por un motivo muy claro y eso la representación, Hu
-            Tao, es la chica del sombrero y traje negro, Ahri es la chica con
-            ojeras de Zorro y no se agregue a alguien más, pero la razón
-            principal es que siento que me representan el algo en particular,
-            así pude agregar un poco más de personalidad al proyecto.
+            As we can see, the division is quite simple in order to show
+            important information in the smallest possible space, in this case:
+            title, cover image and if the work is personal or of a client.
           </p>
           <PlaceHolderImage
-            src="https://i.ibb.co/kq9DKvC/535-FB72-D-D326-4-EFE-92-E8-CDA82-B030-C4-D.png"
-            alt="la primera version del portafolio la tome muy en cuenta"
+            src="https://i.ibb.co/rGMbdrB/post-repetidos.png"
+            alt="Image of several repeated posts"
           />
-          <div className="highlighted-comment">
+          {/* <div className="highlighted-comment">
             <span>
               Hay versiones anteriores a esta que son betas, que no encuentro,
               pero se que te las tengo guardadas, pero siempre tome a Ahri en
               cuenta para este proyecto porque ha sido gran parte de mi
               motivacion para seguir trabajando.
             </span>
-          </div>
+          </div> */}
           <p>
-            Como dije anteriormente, el proyecto aún no está terminado y no creo
-            que termine Xd, pero lo más seguro es que Ahri no se valla de mi
-            portfolio ya que ella además de tener una personalidad similar, A
-            sido alguien importante en mi vida, obvio hay un par de personajes
-            que aún sido mucho más importantes porque gracias a ellos dos hoy
-            soy desarrollador web, pero su implementación será a largo plazo
+            By having a minimalist design, it can be duplicated several times
+            without problems, although in this part I need to finish the
+            background, it really has a fairly correct result without it,
+            obviously the problem with not having it is that it looks a bit
+            empty without not enough projects.
           </p>
-          <h2>Conclusions</h2>
+          <h3>Showing the content of the projects =)</h3>
           <p>
-            Es una idea bastante interesante mencionar tu portafolio como un
-            proyecto porque claro, lo es, y me salvo de un problema bastante
-            complicado y claro es una buen manera de acercarse al usuario que lo
-            ve para darle a entender que el que escribió esto esta cuerdo Xd.
+            Almost finishing the post of the first version of the portfolio, I
+            have to admit that the part that is most difficult for me to design
+            is the way to show the content of a post, personally I think that I
+            have not yet reached the point of making my text looks especially
+            good, but I think I've managed to do something passable
+          </p>
+          <PlaceHolderImage
+            src="https://i.ibb.co/cC6zTGh/text-image.png"
+            alt="bruh"
+          />
+          <p>
+            Try to make the text as less generic as possible, but having this
+            little problem of not being used to working with it does not
+            convince me of the result, luckily on the internet there are guides
+            to have a text that does not overwhelm the user who reads it.{" "}
           </p>
           <p>
-            Claro esta que lo mas obvio es que este portafolio no se verá igual
-            dentro de un par de meses porque tengo agregar muchos detalles que
-            me parecen interesante porque nunca quedo satisfecho con mi trabajo
-            y claro eso llevara un nuevo post sobre el portafolio o ir
-            actualizando el mismo.
+            By not convincing myself the result is likely to end up changing.
           </p>
+          <h2>The future of the portfolio</h2>
+          <p>
+            It would be a lie if I say that the project is finished and would
+            leave much to be desired, but the harsh reality is that my portfolio
+            has a long way to go, from one more section to the implementation of
+            3D objects.
+          </p>
+          <p>
+            Something is clear, I don't know when I'm done with this, maybe I'll
+            never finish it, or maybe I'll get bored with it and start it over
+            with a completely different design.
+          </p>
+          <h2>Conclusion</h2>
+          <p>
+            To start in the industry, the magnificent idea of ​​using your own
+            portfolio as your first project seems to me to meet the expectations
+            of the market ... clearly this works well in the short term, but in
+            the long run you will have to do more personal projects because it
+            is not an eternal solution
+          </p>
+          <p>
+            I know, the conclusion has to do with my idea that I had, but I
+            don't have a conclusion
+          </p>
+          <p>4/12/2021</p>
         </div>
       </div>
     </div>
