@@ -2,11 +2,13 @@ import React, { Fragment, useRef, useEffect, useState } from "react";
 
 import "./style.css";
 
-export function PlaceHolderImage({ src, alt }) {
+export function PlaceHolderImage({ src="", srcPC="", srcMB="", alt="", title="" }) {
   const [loading, setLoading] = useState(true);
   const [image, setImage] = useState(null);
   const [imageMinHeight, setImageMinHeight] = useState(null);
   const imagen = useRef(null);
+
+  const [srcImage, setSrcImage] = useState(null);
 
   console.log(imagen);
 
@@ -20,6 +22,23 @@ export function PlaceHolderImage({ src, alt }) {
   };
 
   useEffect(() => {
+    if(src !== ""){
+      setSrcImage(src)
+    }
+    else if(srcMB === "") {
+      setSrcImage(srcPC);
+    }
+    else if(srcPC === "") {
+      setSrcImage(srcMB);
+    } 
+    else if(srcPC === "" && srcMB === "") {
+      setSrcImage("https://ttager.netlify.app/img/oaAhri4.jpg")
+    }
+    else if (window.innerWidth > 425) {
+      setSrcImage(srcPC);
+    } else {
+      setSrcImage(srcMB);
+    }
     setImageMinHeight(imagen.current.width / 1.77777778);
   }, []);
 
@@ -27,8 +46,9 @@ export function PlaceHolderImage({ src, alt }) {
     <Fragment>
       <div className="image-container" ref={imagen}>
         <img
-          src={src}
+          src={srcImage}
           alt={alt}
+          title={title}
           onLoad={() => setLoading(false)}
           onError={() => setImage(null)}
           style={css}
@@ -47,7 +67,7 @@ export function PlaceHolderImage({ src, alt }) {
             minHeight: imageMinHeight,
             backgroundColor: "rgba(0,0,0, 0.1)",
             color: "rgba(0,0,0, 0.2)",
-            textTransform: 'uppercase',
+            textTransform: "uppercase",
             opacity: loading ? "1" : "0",
             transition: "background-color 0.5s ease-in-out",
             zIndex: 1,
