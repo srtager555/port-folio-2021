@@ -1,6 +1,7 @@
 :root {
   --description-color: #6a6060;
-  --bg-color-G: #DFDEDE;
+  --bg-color-G: #ddd9d9;
+  /* --bg-color-G: #DFDEDE; */
 }
 * {
   margin: 0;

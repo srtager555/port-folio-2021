@@ -1,4 +1,4 @@
-// import MyPortfolio from "../Pages/MyPortfolio";
+import MyPortfolio from "../Pages/MyPortfolio";
 // import TheOne from "../Pages/TheOne";
 import Template from "../Pages/Template";
 // import WrappingLetter from "../Pages/WrappigLetter";
@@ -41,11 +41,11 @@ export const blogPost = [
     name: "portfolio-project",
     type_project: "Personal",
     titulo: "Portfolio",
-    img_tumbnail: "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg",
-    img_header: "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg",
-    img_next: "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg",
+    img_tumbnail: "https://i.ibb.co/nPyTHh1/Portfolio-header.png",
+    img_header: "https://i.ibb.co/nPyTHh1/Portfolio-header.png",
+    img_next: "https://i.ibb.co/nPyTHh1/Portfolio-header.png",
     link: "portfolio-project",
-    content: <Template />,
+    content: <MyPortfolio />,
     show: true,
   },
 ];
