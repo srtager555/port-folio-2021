@@ -7,7 +7,7 @@ import VideoPc from "./assets/HuTaoPC.mp4";
 
 export default function BackgroundHeader({ children, homeState }) {
 
-  let BD = "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg";
+  let BD = "https://i.ibb.co/JpBqbMN/image-Home.jpg";
   // let BM = "https://i.ibb.co/xSQbqVd/hu-Tao-background-mobil.jpg";
 
   return (
