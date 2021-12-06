@@ -96,7 +96,7 @@ export default function Post({ BlogPostContext }) {
             <div key={post.name} className={`container-project ${opacity}`}>
               <div className="container-imageHeader">
                 <div className="imgBox" ref={nextImage}>
-                  <PlaceHolderImage src={post.img_header} alt="" />
+                  <PlaceHolderImage srcPC={post.img_header} srcMB={post.img_header_MB} title="Header Image" />
                 </div>
                 <h1 className="title-post">{post.titulo}</h1>
               </div>
