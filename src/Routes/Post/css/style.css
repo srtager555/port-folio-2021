@@ -38,7 +38,7 @@
 .nextProject {
   position: relative;
   /* height: 400px; */
-  width: 100%;
+  width: 99%;
   max-width: 500px;
   margin: 150px auto;
   cursor: pointer;
