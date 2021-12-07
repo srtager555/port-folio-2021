@@ -20,10 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
-<<<<<<< HEAD
-=======
     "start:node": "react-scripts --openssl-legacy-provider build && node server/",
->>>>>>> e8d0aa9d55292b2832800932a2a4d943d5fc0fc1
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
