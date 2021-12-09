@@ -2,15 +2,13 @@ import React, { Fragment, useRef, useEffect, useState } from "react";
 
 import "./style.css";
 
-export function PlaceHolderImage({ src="", srcPC="", srcMB="", alt="", title="" }) {
+export function PlaceHolderImage({ src, srcPC, srcMB, alt, title }) {
   const [loading, setLoading] = useState(true);
   const [image, setImage] = useState(null);
   const [imageMinHeight, setImageMinHeight] = useState(null);
   const imagen = useRef(null);
 
   const [srcImage, setSrcImage] = useState(null);
-
-  console.log(imagen);
 
   const css = {
     width: "100%",
@@ -22,16 +20,16 @@ export function PlaceHolderImage({ src="", srcPC="", srcMB="", alt="", title="" 
   };
 
   useEffect(() => {
-    if(src !== ""){
+    if(src !== undefined){
       setSrcImage(src)
     }
-    else if(srcMB === "") {
+    else if(srcMB === undefined) {
       setSrcImage(srcPC);
     }
-    else if(srcPC === "") {
+    else if(srcPC === undefined) {
       setSrcImage(srcMB);
     } 
-    else if(srcPC === "" && srcMB === "") {
+    else if(src === undefined && srcPC === undefined && srcMB === undefined) {
       setSrcImage("https://ttager.netlify.app/img/oaAhri4.jpg")
     }
     else if (window.innerWidth > 425) {
