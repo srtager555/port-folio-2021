@@ -30,7 +30,7 @@ function Nextpage({ AvailableShow, index, opacity }) {
     } else {
       setNexPost(index + 1);
     }
-  }, []);
+  }, [AvailableShow, index]);
 
   return (
     <div
@@ -81,7 +81,7 @@ export default function Post({ BlogPostContext }) {
     } else {
       setFound(true);
     }
-  }, []);
+  }, [AvailableShow, indexPost, post.length]);
 
   return (
     <React.Fragment>
@@ -120,7 +120,7 @@ export default function Post({ BlogPostContext }) {
                   opacity={handleOpacity}
                   AvailableShow={AvailableShow}
                   id={id}
-                  index={index}
+                  index={indexPost}
                 />
               </div>
             </LayoutHelmet>

@@ -19,10 +19,6 @@ export function PlaceHolderImage({ src, srcPC, srcMB, alt, title }) {
   };
 
   useEffect(() => {
-    console.log("src " + src);
-    console.log("srcPC " + srcPC);
-    console.log("srcMB " + srcMB);
-
     if (
       src === undefined &&
       srcPC === undefined &&
@@ -36,11 +32,10 @@ export function PlaceHolderImage({ src, srcPC, srcMB, alt, title }) {
     } else if (src === undefined) {
       setSrcImage("https://ttager.netlify.app/img/oaAhri4.jpg");
     } else {
-      console.log("No se encontro una imagen");
       setSrcImage(src);
     }
     setImageMinHeight(imagen.current.width / 1.77777778);
-  }, []);
+  }, [src, srcPC, srcMB]);
 
   return (
     <Fragment>
