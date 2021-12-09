@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { PlaceHolderImage } from "../../components/PlaceHolderImage";
 
 import "../css/styles.css";
