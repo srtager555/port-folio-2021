@@ -23,7 +23,7 @@ export const blogPost = [
     img_tumbnail: "https://i.ibb.co/nmbfyz7/provisional-header.png",
     img_header: "https://i.ibb.co/nmbfyz7/provisional-header.png",
     img_header_MB: "https://i.ibb.co/nmbfyz7/provisional-header.png",
-    img_next: "https://ttager.netlify.app/img/oaAhri.jpg",
+    img_next: "https://i.ibb.co/nmbfyz7/provisional-header.png",
     link: "wrapping-letters",
     content: <WrappingLetter />,
     show: true,

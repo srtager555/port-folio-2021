@@ -25,9 +25,6 @@ export default function WrappingLetter() {
             the solution to this problem minimizing everything to a single line
             of code.
           </p>
-          <div id="link" className="img-box">
-            <img src="https://ttager.netlify.app/img/oaAhri4.jpg" alt="" />
-          </div>
           <h3>objective of the project</h3>
           <p>
             Stop working with the traditional tedious and long procedure for
