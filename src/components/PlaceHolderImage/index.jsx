@@ -4,7 +4,6 @@ import "./style.css";
 
 export function PlaceHolderImage({ src, srcPC, srcMB, alt, title }) {
   const [loading, setLoading] = useState(true);
-  const [image, setImage] = useState(null);
   const [imageMinHeight, setImageMinHeight] = useState(null);
   const imagen = useRef(null);
 
@@ -20,25 +19,23 @@ export function PlaceHolderImage({ src, srcPC, srcMB, alt, title }) {
   };
 
   useEffect(() => {
-    if(src !== undefined){
-      setSrcImage(src)
-    }
-    else if(srcMB === undefined) {
+    if (
+      src === undefined &&
+      srcPC === undefined &&
+      srcMB === undefined
+    ) {
+      setSrcImage("https://ttager.netlify.app/img/oaAhri4.jpg");
+    } else if (srcPC !== undefined && window.innerWidth > 425) {
       setSrcImage(srcPC);
-    }
-    else if(srcPC === undefined) {
+    } else if (srcMB !== undefined && window.innerWidth < 425) {
       setSrcImage(srcMB);
-    } 
-    else if(src === undefined && srcPC === undefined && srcMB === undefined) {
-      setSrcImage("https://ttager.netlify.app/img/oaAhri4.jpg")
-    }
-    else if (window.innerWidth > 425) {
-      setSrcImage(srcPC);
+    } else if (src === undefined) {
+      setSrcImage("https://ttager.netlify.app/img/oaAhri4.jpg");
     } else {
-      setSrcImage(srcMB);
+      setSrcImage(src);
     }
     setImageMinHeight(imagen.current.width / 1.77777778);
-  }, []);
+  }, [src, srcPC, srcMB]);
 
   return (
     <Fragment>
@@ -48,7 +45,6 @@ export function PlaceHolderImage({ src, srcPC, srcMB, alt, title }) {
           alt={alt}
           title={title}
           onLoad={() => setLoading(false)}
-          onError={() => setImage(null)}
           style={css}
         />
         <div
