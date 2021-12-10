@@ -4,7 +4,7 @@ import './css/styles.css'
 
 export default function ProjectButton() {
     return (
-        <Link to='/projects' className="container-projects__button">
+        <Link to='/projects/' className="container-projects__button">
             <span>Projects</span>
             <span className="border"></span>
         </Link>

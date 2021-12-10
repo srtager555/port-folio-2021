@@ -7,65 +7,64 @@ import { AiOutlineMail } from "react-icons/ai";
 import "./css/styles.css";
 
 export default function Navbar() {
-  const [menuInformation, setMenuInformation] = useState('')
-  const [windowWithSize, setWindowWithSize] = useState('32px')
+  const [menuInformation, setMenuInformation] = useState("");
+  const [windowWithSize, setWindowWithSize] = useState("32px");
 
   function handleActiveMenu() {
-    if (menuInformation === '') {
-      setMenuInformation('active')
+    if (menuInformation === "") {
+      setMenuInformation("active");
     } else {
-      setMenuInformation('')
+      setMenuInformation("");
     }
   }
   function handleReturnButton() {
-    if (window.location.pathname === '/') {
-      return ''
-    } else if (window.location.pathname === '/projects') {
-      return '/'
-    } else if (window.location.pathname !== '/projects/') {
-      return '/projects'
+    if (window.location.pathname === "/") {
+      return "";
+    } else if (
+      window.location.pathname === "/projects/" ||
+      window.location.pathname === "/projects" 
+    ) {
+      return "/";
+    } else if (window.location.pathname !== "/projects/") {
+      return "/projects/";
     }
   }
   function handleSizeWindow() {
     if (window.innerWidth > 1080) {
-      setWindowWithSize('128px')
+      setWindowWithSize("128px");
     } else if (window.innerWidth > 768) {
-      setWindowWithSize('96px')
+      setWindowWithSize("96px");
     } else if (window.innerWidth > 360) {
-      setWindowWithSize('64px')
+      setWindowWithSize("64px");
     } else {
-      setWindowWithSize('32px')
+      setWindowWithSize("32px");
     }
   }
   useEffect(() => {
-    handleSizeWindow()
-  }, [])
+    handleSizeWindow();
+  }, []);
   useEffect(() => {
-    window.addEventListener('resize', handleSizeWindow)
+    window.addEventListener("resize", handleSizeWindow);
     return () => {
-      window.removeEventListener('resize', handleSizeWindow)
-    }
-  })
+      window.removeEventListener("resize", handleSizeWindow);
+    };
+  });
 
   return (
     <Fragment>
       <div className="container-menu_options">
         <Link to={handleReturnButton} className="bx-logo">
           <h1>&&</h1>
-        </Link >
-        <div className={`menu-button ${menuInformation}`} onClick={handleActiveMenu}>
-          <div className="circle-border border-1">
-          </div>
+        </Link>
+        <div
+          className={`menu-button ${menuInformation}`}
+          onClick={handleActiveMenu}
+        >
+          <div className="circle-border border-1"></div>
           <div className="container-text">
-            <span className="menu-title Open">
-              Open
-            </span>
-            <span className="menu-title menu">
-              Menu
-            </span>
-            <span className="menu-title menu">
-              Close
-            </span>
+            <span className="menu-title Open">Open</span>
+            <span className="menu-title menu">Menu</span>
+            <span className="menu-title menu">Close</span>
           </div>
         </div>
       </div>

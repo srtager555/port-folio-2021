@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router";
 import "./css/style.css";
 import { InformationPages } from "../../containers/InformationPages";
 import { useHistory } from "react-router-dom";
+import { PlaceHolderImage } from "../../components/PlaceHolderImage";
+import { LayoutHelmet } from "../../Layouts/HelmetLayout";
+import NotFound from "../NotFound";
 
 function Nextpage({ AvailableShow, index, opacity }) {
   let history = useHistory();
@@ -17,7 +20,7 @@ function Nextpage({ AvailableShow, index, opacity }) {
       });
     }, 300);
     setTimeout(() => {
-      history.push(`/${AvailableShow[nexPost].link}`);
+      history.push(`/projects/${AvailableShow[nexPost].link}`);
     }, 1000);
   }
 
@@ -27,7 +30,7 @@ function Nextpage({ AvailableShow, index, opacity }) {
     } else {
       setNexPost(index + 1);
     }
-  }, []);
+  }, [AvailableShow, index]);
 
   return (
     <div
@@ -41,7 +44,11 @@ function Nextpage({ AvailableShow, index, opacity }) {
         <span>{AvailableShow[nexPost].titulo}</span>
       </div>
       <div className="imgBox">
-        <img src={AvailableShow[nexPost].img_next} alt="" />
+        <PlaceHolderImage
+          src={AvailableShow[nexPost].img_next}
+          alt={AvailableShow[nexPost].titulo}
+        />
+        {/* <img src={AvailableShow[nexPost].img_next} alt="" /> */}
       </div>
       <div className="nextProject-next">
         <span>next project</span>
@@ -53,10 +60,13 @@ function Nextpage({ AvailableShow, index, opacity }) {
 
 export default function Post({ BlogPostContext }) {
   const { id } = useParams();
+  const [opacity, setOpacity] = useState("");
+  const nextImage = useRef(null);
+  const [found, setFound] = useState(false);
+
   const AvailableShow = BlogPostContext.filter((blog) => blog.show === true);
   const post = AvailableShow.filter((blog) => blog.name === id);
-  const index = AvailableShow.findIndex((blog) => blog.name === id);
-  const [opacity, setOpacity] = useState("");
+  const indexPost = AvailableShow.findIndex((blog) => blog.name === id);
 
   function handleOpacity() {
     setOpacity("off");
@@ -65,32 +75,60 @@ export default function Post({ BlogPostContext }) {
     }, 1500);
   }
 
+  useEffect(() => {
+    if (post.length === 0) {
+      setFound(false);
+    } else {
+      setFound(true);
+    }
+  }, [AvailableShow, indexPost, post.length]);
+
   return (
     <React.Fragment>
-      {post.map((post) => {
-        return (
-          <div key={post.name} className={`container-project ${opacity}`}>
-            <div className="container-imageHeader">
-              <div className="imgBox">
-                <img src={post.img_header} alt="" />
+      {found ? (
+        post.map((post, index) => {
+          return (
+            <LayoutHelmet
+              key={index + " " + post.name}
+              title={`Carlos && Ponce | ${post.titulo}`}
+              description={post.description}
+              url={`https://ttager.page/projects/${post.link}`}
+              img={post.img_header}
+            >
+              <div className={`container-project ${opacity}`}>
+                <div className="container-imageHeader">
+                  <div className="imgBox" ref={nextImage}>
+                    <PlaceHolderImage
+                      srcPC={post.img_header}
+                      srcMB={post.img_header_MB}
+                      title="Header Image"
+                    />
+                  </div>
+                  <h1 className="title-post">{post.titulo}</h1>
+                </div>
+                <div className="description">
+                  <p>{post.description}</p>
+                </div>
+                <div className="container-content">
+                  <InformationPages
+                    key={index + " pages " + post.name}
+                    index={indexPost}
+                    AvailableShow={AvailableShow}
+                  />
+                </div>
+                <Nextpage
+                  opacity={handleOpacity}
+                  AvailableShow={AvailableShow}
+                  id={id}
+                  index={indexPost}
+                />
               </div>
-              <h1 className="title-post">{post.titulo}</h1>
-            </div>
-            <div className="description">
-              <p>{post.description}</p>
-            </div>
-            <div className="container-content">
-              <InformationPages index={index} AvailableShow={AvailableShow} />
-            </div>
-            <Nextpage
-              opacity={handleOpacity}
-              AvailableShow={AvailableShow}
-              id={id}
-              index={index}
-            />
-          </div>
-        );
-      })}
+            </LayoutHelmet>
+          );
+        })
+      ) : (
+        <NotFound />
+      )}
     </React.Fragment>
   );
 }
