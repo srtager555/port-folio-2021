@@ -1,7 +1,7 @@
 import MyPortfolio from "../Pages/MyPortfolio";
 // import TheOne from "../Pages/TheOne";
 import Template from "../Pages/Template";
-// import WrappingLetter from "../Pages/WrappigLetter";
+import WrappingLetter from "../Pages/WrappigLetter";
 
 export const blogPost = [
   {
@@ -20,12 +20,12 @@ export const blogPost = [
     name: "wrapping-letters",
     type_project: "Personal",
     titulo: "Wrapping Letters",
-    img_tumbnail: "https://i.ibb.co/fnxvswS/kda-2x.jpg",
-    img_header: "https://ttager.netlify.app/img/oaAhri.jpg",
-    img_header_MB: "https://ttager.netlify.app/img/oaAhri.jpg",
-    img_next: "https://i.ibb.co/fnxvswS/kda-2x.jpg",
+    img_tumbnail: "https://i.ibb.co/nmbfyz7/provisional-header.png",
+    img_header: "https://i.ibb.co/nmbfyz7/provisional-header.png",
+    img_header_MB: "https://i.ibb.co/nmbfyz7/provisional-header.png",
+    img_next: "https://i.ibb.co/nmbfyz7/provisional-header.png",
     link: "wrapping-letters",
-    content: <Template />,
+    content: <WrappingLetter />,
     show: true,
   },
   {

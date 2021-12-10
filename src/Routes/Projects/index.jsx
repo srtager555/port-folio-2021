@@ -9,7 +9,7 @@ export default function Projects({ BlogPostContext }) {
 
   useEffect(() => {
     setUrlSlash([...wPath]);
-  }, []);
+  }, [wPath]);
   return (
     <LayoutHelmet
       title='Carlos && Ponce | Projects'
