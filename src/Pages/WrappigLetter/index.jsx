@@ -38,8 +38,7 @@ export default function WrappingLetter() {
           <h2>First stable version</h2>
           <p>
             It is expected that by the end of 2021 its first stable version will
-            be available and by the beginning of 2022 a version ready for
-            production
+            be available.
           </p>
         </div>
       </div>
