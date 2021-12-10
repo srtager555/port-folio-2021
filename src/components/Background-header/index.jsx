@@ -6,8 +6,9 @@ import VideoPc from "./assets/HuTaoPC.mp4";
 // import VideoMb from "./assets/HuTaoMb.mp4";
 
 export default function BackgroundHeader({ children, homeState }) {
-
-  let BD = "https://i.ibb.co/0J2Ntfn/hu-Tao-background-desktop.jpg";
+  
+  // const VideoPc = "https://ttager-portfolio.netlify.app/HuTaoPc.mp4"
+  let BD = "https://i.ibb.co/JpBqbMN/image-Home.jpg";
   // let BM = "https://i.ibb.co/xSQbqVd/hu-Tao-background-mobil.jpg";
 
   return (

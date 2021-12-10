@@ -46,24 +46,24 @@ export default function TittleHeader() {
       <div className="container-text" ref={elemento}>
         <p className="header-title">
           <span className="hidden-letter">
-            {titleFirstPart.map((l) => {
+            {titleFirstPart.map((l, index) => {
               if (l === " ") {
-                return <span className="letter-title"> </span>;
+                return <span key={index + ' ' + l} className="letter-title"> </span>;
               } else if (l === ",") {
-                return <span className="letter-title little-comma">{l}</span>;
+                return <span key={index + ' ' + l} className="letter-title little-comma">{l}</span>;
               } else {
-                return <span className="letter-title">{l}</span>;
+                return <span key={index + ' ' + l} className="letter-title">{l}</span>;
               }
             })}{" "}
           </span>
           <span className="hidden-letter">
-            {titleSecondPart.map((l) => {
+            {titleSecondPart.map((l, index) => {
               if (l === " ") {
-                return <span className="letter-title"> </span>;
+                return <span key={index + ' ' + l} className="letter-title"> </span>;
               } else if (l === ",") {
-                return <span className="letter-title little-comma">{l}</span>;
+                return <span key={index + ' ' + l} className="letter-title little-comma">{l}</span>;
               } else {
-                return <span className="letter-title">{l}</span>;
+                return <span key={index + ' ' + l} className="letter-title">{l}</span>;
               }
             })}
           </span>

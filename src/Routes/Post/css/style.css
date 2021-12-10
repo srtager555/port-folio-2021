@@ -22,8 +22,8 @@
   width: 100%;
   overflow: hidden;
 }
-.container-imageHeader .imgBox img {
-  width: 100%;
+.container-imageHeader .imgBox .image-container {
+  margin: 0;
 }
 .container-imageHeader h1 {
   margin-top: 20px;
@@ -38,7 +38,7 @@
 .nextProject {
   position: relative;
   /* height: 400px; */
-  width: 100%;
+  width: 90%;
   max-width: 500px;
   margin: 150px auto;
   cursor: pointer;
@@ -52,11 +52,10 @@
   align-items: center;
   z-index: -1;
 }
-.nextProject .imgBox img {
-  width: 100%;
+.nextProject .imgBox .image-container {
   transition: 1s ease-in-out;
 }
-.nextProject:hover .imgBox img {
+.nextProject:hover .imgBox .image-container {
   transform: scale(1.1);
 }
 
@@ -104,5 +103,11 @@
   transition: 1s ease-in-out;
 }
 .nextProject:hover .nextProject-next span {
-  transform: translateY(-17px);
+  transform: translateY(-20px);
+}
+
+@media (min-width: 1024px) {
+  .container-imageHeader {
+    padding-top: 85px;
+  }
 }
