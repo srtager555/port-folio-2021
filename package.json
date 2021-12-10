@@ -1,6 +1,7 @@
 {
+  "homepage": "https://ttager.page/",
   "name": "new-portfolio",
-  "version": "0.1.0",
+  "version": "0.6.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -20,6 +21,10 @@
   "scripts": {
     "start:react": "react-scripts start",
     "start": "react-scripts --openssl-legacy-provider start",
+<<<<<<< HEAD
+=======
+    "start:node": "react-scripts --openssl-legacy-provider build && node server/",
+>>>>>>> e8d0aa9d55292b2832800932a2a4d943d5fc0fc1
     "build": "react-scripts --openssl-legacy-provider build",
     "build:react": "react-scripts build",
     "test": "react-scripts test",
@@ -42,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
