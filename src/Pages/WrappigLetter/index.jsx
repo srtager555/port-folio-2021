@@ -29,12 +29,12 @@ export default function WrappingLetter() {
             Stop working with the traditional tedious and long procedure for
             example:
           </p>
-          <PlaceHolderImage src="https://ttager.netlify.app/img/oaAhri4.jpg"/>
+          <PlaceHolderImage src="https://i.ibb.co/ky5Q3q8/after.png" />
           <p>
             And start simplifying the process as quickly and flexibly as
             possible like this example:
           </p>
-          <PlaceHolderImage src="https://ttager.netlify.app/img/oaAhri4.jpg" />
+          <PlaceHolderImage src="https://i.ibb.co/W3FhNkZ/before.png" />
           <h2>First stable version</h2>
           <p>
             It is expected that by the end of 2021 its first stable version will
