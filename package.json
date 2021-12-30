@@ -17,7 +17,7 @@
     "react-router-transition": "^2.1.0",
     "react-scripts": "^4.0.3",
     "web-vitals": "^1.1.2",
-    "wrapping-letters": "^0.1.0"
+    "wrapping-letters-react": "^1.1.1"
   },
   "scripts": {
     "start:react": "react-scripts start",

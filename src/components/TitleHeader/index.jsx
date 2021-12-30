@@ -1,20 +1,11 @@
-import React, { Fragment, useState, useEffect, useRef } from "react";
+import React, { Fragment, useEffect, useRef } from "react";
+import WrappingLetters from "wrapping-letters-react";
 import "./css/styles.css";
 
 import { anime } from "react-anime";
 
 export default function TittleHeader() {
   const elemento = useRef(null);
-  const [titleFirstPart, setTitleFirstPart] = useState([]);
-  const [titleSecondPart, setTitleSecondPart] = useState([]);
-
-  const textTitleFirst = "I'M CARLOS, A CREATIVE";
-  const textTitleSecond = "FRONT-END DEVELOPER";
-
-  useEffect(() => {
-    setTitleFirstPart([...textTitleFirst]);
-    setTitleSecondPart([...textTitleSecond]);
-  }, []);
 
   function titleInitAnime() {
     elemento.current = anime
@@ -30,10 +21,6 @@ export default function TittleHeader() {
         rotateZ: [180, 0],
         delay: anime.stagger(50),
       })
-      .add({
-        targets: ".container-text .border",
-        width: ["0%", "100%"],
-      });
   }
   useEffect(() => {
     setTimeout(() => {
@@ -46,29 +33,30 @@ export default function TittleHeader() {
       <div className="container-text" ref={elemento}>
         <p className="header-title">
           <span className="hidden-letter">
-            {titleFirstPart.map((l, index) => {
-              if (l === " ") {
-                return <span key={index + ' ' + l} className="letter-title"> </span>;
-              } else if (l === ",") {
-                return <span key={index + ' ' + l} className="letter-title little-comma">{l}</span>;
-              } else {
-                return <span key={index + ' ' + l} className="letter-title">{l}</span>;
-              }
-            })}{" "}
+            <WrappingLetters
+              word="I'M CARLOS,"
+              wordOptions={[{"ClassToAdd": "letter-title"}]}
+            />
           </span>
           <span className="hidden-letter">
-            {titleSecondPart.map((l, index) => {
-              if (l === " ") {
-                return <span key={index + ' ' + l} className="letter-title"> </span>;
-              } else if (l === ",") {
-                return <span key={index + ' ' + l} className="letter-title little-comma">{l}</span>;
-              } else {
-                return <span key={index + ' ' + l} className="letter-title">{l}</span>;
-              }
-            })}
+            <WrappingLetters
+              word="A CREATIVE"
+              wordOptions={[{"ClassToAdd": "letter-title"}]}
+            />
+          </span>
+          <span className="hidden-letter">
+            <WrappingLetters
+              word="FRONT-END"
+              wordOptions={[{"ClassToAdd": "letter-title"}]}
+            />
+          </span>
+          <span className="hidden-letter">
+            <WrappingLetters
+              word="DEVELOPER"
+              wordOptions={[{"ClassToAdd": "letter-title"}]}
+            />
           </span>
         </p>
-        <span className="border"></span>
       </div>
     </Fragment>
   );
