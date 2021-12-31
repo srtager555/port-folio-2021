@@ -1,13 +1,13 @@
 .container-projects__button {
   display: block;
   color: #fff;
-  padding:6px 3px;
+  padding: 6px 3px;
   text-decoration: none;
   transform: translateY(0%);
-  transition: 1s ease-in-out 1.5s, 
-  /* background 0.5s ease-in-out 0s,
-    color 0.5s ease-in-out 0.2s */
-    ;
+  transition: 1s ease-in-out 1.5s,
+    /* background 0.5s ease-in-out 0s,
+    color 0.5s ease-in-out 0.2s */;
+  overflow: hidden;
 }
 
 .container-bg.off .container-projects__button {
@@ -21,8 +21,11 @@
   font-size: 17px;
   text-transform: uppercase;
 }
-.container-projects__button .word_container .word-bx {
-  overflow: hidden;
+
+.container-projects__button .word_container :is(.word__container-first-word, .word__container-second-word) {
+  display: flex;
+  transform: .5s;
+  transform: 1000ms;
 }
 .container-projects__button .word_container .word__container-second-word {
   position: absolute;
@@ -30,8 +33,8 @@
   top: 0;
 }
 .container-projects__button .word_container .word__container-second-word span {
-  display: inline-block;
-  transform: translateY(-100%);
+  transform: translateY(110%);
+  color: #ddd;
 }
 
 .container-projects__button .border {
@@ -53,4 +56,4 @@
     margin-top: 22px;
     margin-right: 20px;
   }
-} 
+}
