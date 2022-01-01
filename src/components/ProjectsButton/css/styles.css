@@ -7,7 +7,11 @@
   transition: 1s ease-in-out 1.5s,
     /* background 0.5s ease-in-out 0s,
     color 0.5s ease-in-out 0.2s */;
+  opacity: 0;
   overflow: hidden;
+}
+.container-projects__button.on {
+  opacity: 1;
 }
 
 .container-bg.off .container-projects__button {
@@ -20,21 +24,20 @@
   position: relative;
   font-size: 17px;
   text-transform: uppercase;
+  overflow: hidden;
+  height: 22px;
 }
 
-.container-projects__button .word_container :is(.word__container-first-word, .word__container-second-word) {
+.container-projects__button
+  .word_container
+  :is(.word__container-first-word, .word__container-second-word) {
   display: flex;
-  transform: .5s;
+  transform: 0.5s;
   transform: 1000ms;
 }
-.container-projects__button .word_container .word__container-second-word {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
+
 .container-projects__button .word_container .word__container-second-word span {
-  transform: translateY(110%);
-  color: #ddd;
+  transform: translateY(0%);
 }
 
 .container-projects__button .border {
@@ -49,6 +52,18 @@
 }
 .container-projects__button:hover .border {
   width: 90%;
+}
+@media (min-width: 500px) {
+  .container-projects__button .word_container {
+    font-size: 30px;
+    height: 40px;
+  }
+}
+@media (min-width: 620px) {
+  .container-projects__button .word_container {
+    font-size: 40px;
+    height: 52px;
+  }
 }
 @media (min-width: 1024px) {
   .container-projects__button {

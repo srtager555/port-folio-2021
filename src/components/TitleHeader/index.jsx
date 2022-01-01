@@ -11,7 +11,7 @@ export default function TittleHeader() {
     elemento.current = anime
       .timeline({
         duration: 1000,
-        easing: "easeInOutSine",
+        easing: "easeInOutSine", 
       })
       .add({
         targets: ".header-title .letter-title",

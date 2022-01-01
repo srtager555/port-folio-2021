@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { LayoutHelmet } from "../../Layouts/HelmetLayout"
-import "./css/style.css";
+import "./css/style.css"; 
 
 export default function Projects({ BlogPostContext }) {
   const [urlSlash, setUrlSlash] = useState([]);

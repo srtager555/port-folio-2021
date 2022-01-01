@@ -1,4 +1,7 @@
 .container-text {
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
   transform: translateY(0%);
   transition: 1s ease-in-out 1.5s;
 }
@@ -10,15 +13,12 @@
 }
 
 .header-title {
-  display: inline-block;
-  /* width: 100%; */
-  text-align: center;
+  display: inline;
   font-size: 34px;
+  text-align: start;
 }
 .header-title .hidden-letter {
-  display: inline-block;
-  margin-bottom: -10px;
-  height: 50%;
+  display: block;
   overflow: hidden;
 }
 .header-title .hidden-letter .letter-title {
@@ -27,13 +27,16 @@
   display: inline-block;
   transform: translate(0.55em, 1.1em) rotateZ(180deg);
 }
-@media (max-width: 400px) {
-  /* .container-text {
-    width: 354px;
-  }
+
+@media (min-width: 400px) {
   .header-title {
-    font-size: 30px;
-  } */
+    font-size: 40px;
+  }
+}
+@media (min-width: 620px) {
+  .header-title {
+    font-size: 60px;
+  }
 }
 @media (min-width: 1024px) {
   /* .container-text {

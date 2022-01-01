@@ -36,13 +36,13 @@ export default function Main() {
 
   return (
     <BrowserRouter>
-      <Navbar />
       <BackgroundHeader homeState={homeState}>
         <TittleHeader />
         <ContainerSections>
           <ProjectButton />
         </ContainerSections>
       </BackgroundHeader>
+      <Navbar />
       <AnimatedSwitch
         atEnter={{ opacity: 0 }}
         atLeave={{ opacity: 0 }}

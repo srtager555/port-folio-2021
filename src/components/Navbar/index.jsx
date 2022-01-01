@@ -56,39 +56,6 @@ export default function Navbar() {
         <Link to={handleReturnButton} className="bx-logo">
           <h1>&&</h1>
         </Link>
-        <div
-          className={`menu-button ${menuInformation}`}
-          onClick={handleActiveMenu}
-        >
-          <div className="circle-border border-1"></div>
-          <div className="container-text">
-            <span className="menu-title Open">Open</span>
-            <span className="menu-title menu">Menu</span>
-            <span className="menu-title menu">Close</span>
-          </div>
-        </div>
-      </div>
-      <div className={`container-menu_information ${menuInformation}`}>
-        <div className="background-blur">
-          <div className="filter" />
-        </div>
-        <div className="menu-links">
-          <a href="mailto:skarletst5@gmail.com">
-            <AiOutlineMail size={windowWithSize} />
-          </a>
-          <a href="https://github.com/Carlos-And-Ponce">
-            <ImGithub size={windowWithSize} />
-          </a>
-          <a href="https://www.linkedin.com/in/srtager555/">
-            <ImLinkedin size={windowWithSize} />
-          </a>
-          <a href="https://www.behance.net/carlosponce10">
-            <ImBehance size={windowWithSize} />
-          </a>
-        </div>
-        <div className="container-form">
-          <form></form>
-        </div>
       </div>
     </Fragment>
   );
